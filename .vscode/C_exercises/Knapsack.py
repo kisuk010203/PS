@@ -1,19 +1,19 @@
 # 0,1 KNAPSACK 12865
-# n, k = map(int, input().split())
-# wvlist = []
-# knapsack = [[0]*(k+1) for _ in range(n)]
-# for _ in range(n):
-#     wvlist.append(tuple(map(int, input().split())))
-# wvlist = sorted(wvlist, key = lambda x: x[1])
-# for idx in range(n):
-#     for cap in range(k+1):
-#         if cap >= wvlist[idx][0]:
-#             knapsack[idx][cap] = max(knapsack[idx-1][cap], knapsack[idx-1][cap-wvlist[idx][0]] + wvlist[idx][1])
-#         else:
-#             knapsack[idx][cap] = knapsack[idx-1][cap]
-# print(knapsack[n-1][k])
+import sys
 
-#COINS 3067
+input = sys.stdin.readline
+n, k = map(int, input().split())
+wvlist = []
+dp = [0] * (k + 1)
+for _ in range(n):
+    wvlist.append(tuple(map(int, input().split())))
+for w, v in wvlist:
+    for cap in range(k, w - 1, -1):
+        dp[cap] = max(dp[cap], dp[cap - w] + v)
+
+print(dp[k])
+
+# COINS 3067
 # T = int(input())
 # for _ in range(T):
 #     N = int(input())
@@ -30,8 +30,8 @@
 #                     s += knapsack[coinidx][item - coinlist[coinidx]]
 #             knapsack[start].append(s)
 #     print(knapsack[0][money])
-    
-#FROBENIUS 9115
+
+# FROBENIUS 9115
 # T = int(input())
 # for _ in range(T):
 #     froblist= list(map(int, input().split()))
@@ -52,7 +52,7 @@
 #     print(frobcnt)
 #     print(frobnum)
 
-#14728
+# 14728
 # k, n = map(int, input().split())
 # wvlist = []
 # knapsack = [[0]*(k+1) for _ in range(n)]
@@ -67,7 +67,7 @@
 #             knapsack[idx][cap] = knapsack[idx-1][cap]
 # print(knapsack[n-1][k])
 
-#22839
+# 22839
 # coinlist = list(i**2 for i in range(1, 18))
 # while True:
 #     money = int(input())
@@ -84,7 +84,7 @@
 #             knapsack[start].append(s)
 #     print(knapsack[0][money])
 
-#1535
+# 1535
 # n = int(input())
 # loss = list(map(int, input().split()))
 # happy = list(map(int, input().split()))

@@ -1,0 +1,26 @@
+repos:
+  - repo: https://github.com/pre-commit/mirrors-black
+    rev: v21.12b0
+    hooks:
+      - id: black
+
+  - repo: https://github.com/prettier/prettier
+    rev: <insert-prettier-version>  # Replace with the actual version you want
+    hooks:
+      - id: prettier
+        files: '\.(json|yaml|yml|css|md|html)$'
+
+  - repo: https://github.com/mirrors/clang-format
+    rev: <insert-clang-format-version>
+    hooks:
+      - id: clang-format
+        name: clang-format-cpp
+        files: '\.(cpp|h)$'
+
+  - repo: local
+    hooks:
+      - id: google-java-format
+        name: google-java-format
+        entry: path/to/google-java-format.jar
+        language: java
+        files: '\.java$'
