@@ -13,6 +13,9 @@ void create_or_add(unordered_map<double, ll> &map, double slope) {
     }
 }
 int main(int argc, char const *argv[]) {
+    cin.tie(0);
+    cout.tie(0);
+    ios_base::sync_with_stdio(false);
     unordered_map<double, ll> slope;
     int n;
     cin >> n;
