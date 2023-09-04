@@ -16,6 +16,12 @@ char get_next(char a) {
         return 'D';
     case 'D':
         return 'H';
+
+
+
+
+
+        
     case 'H':
         return 'K';
     default:
