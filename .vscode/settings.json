@@ -39,5 +39,21 @@
     "tuple": "cpp",
     "new": "cpp"
   },
-  "C_Cpp.errorSquiggles": "disabled"
+  "C_Cpp.errorSquiggles": "disabled",
+
+  //VSCODE Vim extension errors
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-s>": false,
+    "<C-z>": false,
+    "<C-w>": false,
+    "<C-x>": false,
+    "<C-h>": false,
+    "<C-f>": false,
+    "<C-p>": false,
+    "<C-a>": false,
+    "<C-v>": false,
+    "<C-c>": false,
+  },
+  "vim.useSystemClipboard": true,
 }
