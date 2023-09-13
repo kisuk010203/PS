@@ -37,10 +37,10 @@
     "ostream": "cpp",
     "iosfwd": "cpp",
     "tuple": "cpp",
-    "new": "cpp"
+    "new": "cpp",
+    "array": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
-
   //VSCODE Vim extension errors
   "vim.handleKeys": {
     "<C-d>": true,
