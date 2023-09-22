@@ -12,7 +12,7 @@ void initPi(){
         while(j>0 && P[i]!=P[j])
             j = pi[j-1];
         if(P[i] == P[j]) pi[i] = ++j;
-        
+
     }
 }
 int KMP(){
@@ -33,7 +33,7 @@ int KMP(){
         if(search == 0){
             start++; continue;
         }
-        start = start + search - pi[search-1]; 
+        start = start + search - pi[search-1];
         search = pi[search-1];
     }
     return ans;
@@ -48,7 +48,7 @@ int main(){
     for(int i=0; i<n; i++){
         char temp; cin >> temp;
         T[i] = temp; T[i+n] = temp;
-        
+
     }
     for(int i=0; i<n; i++){
         char temp; cin >> temp;

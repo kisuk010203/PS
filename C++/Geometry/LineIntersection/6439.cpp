@@ -21,28 +21,28 @@ int segment_meet(int start_x, int end_x, int start_y, int end_y){
             int f = min(x[start_y], x[end_y]), g = max(x[start_y], x[end_y]);
             if(d<f)
                 flag = (e>=f);
-            
+
             else if(d==f)
                 flag = 1;
-            
+
             else
-                flag = (g>=d); 
+                flag = (g>=d);
             d = min(y[start_x], y[end_x]), e = max(y[start_x], y[end_x]);
             f = min(y[start_y], y[end_y]), g = max(y[start_y], y[end_y]);
             if(d<f)
                 flag = flag && (e>=f);
-            
+
             else if(d==f)
                 flag = flag &&1;
-            
+
             else
-                flag = flag && (g>=d); 
+                flag = flag && (g>=d);
             return flag;
         }
         return 1;
-    } 
+    }
     return 0;
-}   
+}
 int main(){
     for(int i=0; i<4; i++) cin >> x[i] >> y[i];
     x[4] = x[2], y[4] = y[3], x[5] = x[3], y[5] = y[2];

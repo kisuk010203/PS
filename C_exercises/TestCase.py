@@ -9,7 +9,7 @@
 #         for i in range(10):
 #             d[i] += pow(10, n-2) * (n-1)
 #         d[0] -= (pow(10, n-1) - 1)//9
-        
+
 #     for i in range(1, ls[0]):
 #         d[i] += pow(10, n-1)
 #         for j in range(10):
@@ -62,7 +62,7 @@
 #             s += (((d[i]*d[idx - i - 1])%div)*chooseDict[(idx-1, min(i, idx-i-1))])%div
 #         d[idx] = s%div
 #     print((2*d[num])%div)
-        
+
 # N, M = map(int, input().split())
 # ls = []
 # for _ in range(M):
@@ -108,7 +108,7 @@
 #         ls.append(0)
 #         continue
 #     ls.append(int(s[2:])%1000)
-    
+
 # for i in range(1, 1001):
 #     for item in ls:
 #         error = -1*((item*i)%-1000)
@@ -176,7 +176,7 @@
 # n, k = map(int, input().split())
 # parDict = dict()
 # def setParDict(curr, open, fault):
-#     if curr == n : 
+#     if curr == n :
 #         k = int(fault or open!=0)
 #         parDict[(curr, open, fault)] = k
 #         return k
@@ -198,7 +198,7 @@
 #     else:
 #         print(")", end = "")
 #         findK(curr+1, open-1, fault or open<=0, k - parDict[(curr+1, open+1, fault)])
-        
+
 # setParDict(0,0,False)
 # if k >= parDict[(0, 0, False)]:
 #     print(-1)
@@ -230,7 +230,7 @@
 #     if open <0 :
 #         parDict[(curr, open)] = 0
 #         return 0
-#     if curr == n : 
+#     if curr == n :
 #         k = int(open==0)
 #         parDict[(curr, open)] = k
 #         return k
@@ -249,7 +249,7 @@
 #     else:
 #         print(")", end = "")
 #         findK(curr+1, open-1, k - parDict[(curr+1, open+1)])
-        
+
 # setParDict(0,0)
 # if k >= parDict[(0, 0)]:
 #     print(-1)
@@ -292,7 +292,7 @@
 #     for i in range(a, a+3):
 #         for j in range(b, b+3):
 #             A[i][j] = change(A[i][j])
-            
+
 # m, n = map(int, input().split())
 # for _ in range(m):
 #     A.append(list(input()))
@@ -327,7 +327,7 @@
 
 # print(min([dp[(N-1,i)] for i in range(3)]))
 
-    
+
 # N = int(input())
 # searched = [False] * N
 # quantity = [1] + [0]*(N-1)
@@ -388,7 +388,7 @@
 #         r, c = start[0], start[1]
 #         for pos in [(r-1, c), (r, c-1), (r+1, c), (r, c+1)]:
 #             if pos in posCab and not searchDict[pos]:
-#                 dfs(pos)  
+#                 dfs(pos)
 #         return
 #     for item in posCab:
 #         if not searchDict[item]:

@@ -59,6 +59,6 @@ int main(){
             }
         }
         if(v1 != v2) v1 = par[v1][0];
-        cout<<v1<<"\n";    
+        cout<<v1<<"\n";
 
 }

@@ -45,7 +45,7 @@ int main(){
                 if(dright-dleft<=0) cout << 1 << '\n';
                 else cout << 2 << '\n';
             }
-            
+
         }
     }
 }

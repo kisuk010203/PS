@@ -20,7 +20,7 @@ int main(){
     while(start <= end){
         if(curr == n){
             cnt++;
-        } 
+        }
         if(curr > n || end == ter){
             curr -= prime[start];
             start++;

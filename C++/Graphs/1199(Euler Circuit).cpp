@@ -26,7 +26,7 @@ int main(){
             sum+=adj[i][j];
         }
         if(sum%2) cntodd++;
-    } 
+    }
     if(cntodd)
         cout << -1;
     else{

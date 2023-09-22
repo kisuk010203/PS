@@ -386,27 +386,3 @@ int main(){
     printf("%d %d", red+green+blue, brown+blue);
 
 }*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

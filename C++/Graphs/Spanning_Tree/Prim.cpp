@@ -25,7 +25,7 @@ int prim(vector<pair<int, int>>&selected){
                 parent[v] = u;
                 minWeight[v] = weight;
             }
-        }               
+        }
     }
     return ret;
 }

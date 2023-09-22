@@ -39,8 +39,8 @@ int main(int argc, char const *argv[])
             int f2 = find(name_map[s]);
             cout << max(sz[f1], sz[f2]) << '\n';
         }
-        
+
     }
-    
+
     return 0;
 }

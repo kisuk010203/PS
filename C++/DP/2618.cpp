@@ -2,7 +2,7 @@
 using namespace std;
 #define MAX 1010
 #define INF 20000008
-int n, w; 
+int n, w;
 int arr[MAX][MAX][2]; // i case (j case, i case) first car moved : k
 int problem[MAX][2][2];
 int carSeq[MAX];
@@ -42,9 +42,9 @@ int main(){
     for(int i=2; i<w+1; i++){
         for(int j=0; j<i; j++){
             if(j!=i-1){
-                arr[i][j][0] = arr[i-1][j][0] 
+                arr[i][j][0] = arr[i-1][j][0]
                 + abs(problem[i-1][0][0]-problem[i][0][0]) + abs(problem[i-1][1][0]-problem[i][1][0]);
-                arr[i][j][1] = arr[i-1][j][1] 
+                arr[i][j][1] = arr[i-1][j][1]
                 + abs(problem[i-1][0][1]-problem[i][0][1]) + abs(problem[i-1][1][1]-problem[i][1][1]);
             }
             else{
@@ -88,5 +88,5 @@ int main(){
     else
         for(int i=1; i<=w; i++)
             cout << 3- carSeq[i] << '\n';
-        
+
 }

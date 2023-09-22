@@ -36,7 +36,7 @@ ll getsum(ll node, ll left, ll right, ll start, ll end){
 }
 void subseq(ll left, ll right){
     if(left>right) return;
-    if(left == right){ 
+    if(left == right){
         ans = max(ans, arr[left]*arr[left]);
         return;
     }
@@ -54,7 +54,7 @@ int main(){
     ans = 0;
     init(1, 0, n-1);
     init_sum(1, 0, n-1);
-    
+
 
     subseq(0, n-1);
     cout << ans;

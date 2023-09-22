@@ -10,7 +10,7 @@ int main(){
     cin >> n >> l;
     for(int i=1; i<=n; i++) cin >> arr[i];
     deque<p> dq;
-    
+
     dq.push_back(make_pair(1, arr[1])); cout << arr[1];
     for(int i=2; i<=n; i++){
         if(dq.front().first <= i-l) dq.pop_front();

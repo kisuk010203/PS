@@ -21,6 +21,6 @@ int main(int argc, char const *argv[])
         else cout << hashmap[temp] << ' ';
     }
 
-    
+
     return 0;
 }

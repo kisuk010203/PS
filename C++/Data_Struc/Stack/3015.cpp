@@ -21,7 +21,7 @@ int main(){
             stack[idx2-1] = arr[i];
             top = idx2-1;
         }
-        
+
     }
     cout << ans;
 }

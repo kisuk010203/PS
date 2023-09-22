@@ -28,7 +28,7 @@ void backtracking(int count){
             }
         }
     }
-    
+
 }
 int main(int argc, char const *argv[])
 {

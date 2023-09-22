@@ -14,7 +14,7 @@ int main(){
     sort(seq.begin(), seq.end(), compare);
     vector<int> temp(n);
     vector<int> pos(n);
-    
+
     int vec_size = 1;
     temp[0] = seq[0].second;
     for(int i=1; i<n; i++){

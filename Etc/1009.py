@@ -122,7 +122,7 @@
 #                 cnt += 1
 #                 dq.append(v)
 #                 isSearched[v] = True
-                
+
 #     return cnt
 # ans, ma = [], 0
 # for i in range(1, n+1):
@@ -153,13 +153,13 @@
 #                     s += str(j)
 #                 dp[n] = s
 #                 return s
-        
+
 #         s = ""
 #         for i in range(len(t),-1,-1):
 #             s+= str(i)
 #         dp[n] = s
 #         return s
-    
+
 # if n > 1022:
 #     print(-1)
 # else:
@@ -241,7 +241,7 @@
 #         return path[(row, col)]
 #     path[(row, col)] = ls[row][col] + max(findPath(row+1, col), findPath(row+1, col+1))
 #     return path[(row, col)]
-# depth = int(input())    
+# depth = int(input())
 # ls = []
 # for i in range(depth):
 #     ls.append(list(map(int, input().split())))
@@ -258,7 +258,7 @@
 # for _ in range(numnode):
 #     node, lnode, rnode = input().split()
 #     tree[hashdict[node]] = (hashdict[lnode], hashdict[rnode])
-    
+
 # def preorder(node):
 #     if node == -1:
 #         return
@@ -279,7 +279,7 @@
 #     postorder(tree[node][0])
 #     postorder(tree[node][1])
 #     print(ascii_uppercase[node], end = "")
-    
+
 # preorder(0); print()
 # inorder(0); print()
 # postorder(0); print()

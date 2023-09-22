@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
     deque<p> dq;
     dq.push_back(make_pair(0, cow[0]));
     for(int i=2; i<=n; i++){
-        
+
         cout << " " << dq.front().second;
     }
     for(int i=0; i<K-1; i++){
@@ -30,8 +30,7 @@ int main(int argc, char const *argv[])
         if(dq.front().first <= i-K) dq.pop_front();
         while(!dq.empty() && dq.back().second >= cow[i]) dq.pop_back();
         dq.push_back(make_pair(i, cow[i]));
-        dp[i] = 
+        dp[i] =
     }
     return 0;
 }
-

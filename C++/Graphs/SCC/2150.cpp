@@ -40,7 +40,7 @@ int main(){
             SCC(i);
         }
     }
-    
+
     cout << scc_count << "\n";
     vector<int> scc_vec[scc_count];
     for(int i=0; i<vertex_num; i++){

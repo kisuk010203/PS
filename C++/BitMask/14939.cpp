@@ -17,18 +17,18 @@ int main(){
     }
     for(int i=0; i<(1<<10); i++){
         for(int x=0; x<10; x++)
-            for(int j=0; j<10; j++) 
+            for(int j=0; j<10; j++)
                 temp[x][j] =  board[x][j];
         ans[i] = 0;
         for(int j=0; j<10; j++){
             if(i & (1<<j)){
                 turnon[0][j] = 1;
                 for(int k =0; k<5; k++){
-                    if(inbound(x_diff[k], j+y_diff[k])) 
-                        temp[x_diff[k]][j+y_diff[k]] = 1 - temp[x_diff[k]][j+y_diff[k]]; 
+                    if(inbound(x_diff[k], j+y_diff[k]))
+                        temp[x_diff[k]][j+y_diff[k]] = 1 - temp[x_diff[k]][j+y_diff[k]];
                 }
                 ans[i]++;
-            } 
+            }
             else turnon[0][j] = 0;
         }
         for(int x=1; x<10; x++){
@@ -36,8 +36,8 @@ int main(){
                 if(temp[x-1][y]){
                     turnon[x][y] = 1;
                     for(int k =0; k<5; k++){
-                        if(inbound(x+x_diff[k], y+y_diff[k])) 
-                            temp[x+x_diff[k]][y+y_diff[k]] = 1 - temp[x+x_diff[k]][y+y_diff[k]]; 
+                        if(inbound(x+x_diff[k], y+y_diff[k]))
+                            temp[x+x_diff[k]][y+y_diff[k]] = 1 - temp[x+x_diff[k]][y+y_diff[k]];
                     }
                     ans[i]++;
                 }

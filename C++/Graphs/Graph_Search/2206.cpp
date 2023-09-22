@@ -7,7 +7,7 @@ int x_next[4] = {-1, 1, 0, 0};
 int y_next[4] = {0, 0, -1, 1};
 int arr[1004][1004];
 int visited[1004][1004][2];
-    
+
 int in_bound(int r, int c){
     return ((r>=0 && r<n) && (c>=0 && c<m));
 }
@@ -21,12 +21,12 @@ int main(){
             arr[i][j] = temp[j] - '0';
         }
     }
-    
+
     queue<tue> que;
     que.push(make_tuple(0, 0, 0, 1));
     visited[0][0][0] = 1;
     visited[0][0][1] = 1;
-    
+
     while(!que.empty()){
         tue temp = que.front();
         int r = get<0>(temp);

@@ -11,7 +11,7 @@ void GetLis(int start, int skip){
     if(lis[start] == 1) return;
     vector<pair<int, int>> nexts;
     for(int i=start+1; i<=n; i++){
-        if(seq[start] < seq[i] && lis[i] == lis[start]-1) 
+        if(seq[start] < seq[i] && lis[i] == lis[start]-1)
             nexts.push_back(make_pair(seq[i], i));
     }
     sort(nexts.begin(), nexts.end());

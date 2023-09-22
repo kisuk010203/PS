@@ -5,6 +5,6 @@ int arr[100001];
 int main(){
     int t; cin >> t;
     while(t--){
-        
+
     }
 }

@@ -34,16 +34,16 @@ bool intersection(segment a, segment b){
     if(ccw1!=1 && ccw2!=1){
         if(ccw1 == 0 && ccw2 == 0){
             int flag = 0;
-            int d = min(a.first.first, a.second.first), 
+            int d = min(a.first.first, a.second.first),
                 e = max(a.first.first, a.second.first);
-            int f = min(b.first.first, b.second.first), 
+            int f = min(b.first.first, b.second.first),
                 g = max(b.first.first, b.second.first);
             if(d<f)
                 flag = (e>=f);
             else if(d==f)
                 flag = 1;
             else
-                flag = (g>=d); 
+                flag = (g>=d);
 
             d = min(a.first.second, a.second.second),
             e = max(a.first.second, a.second.second);
@@ -51,12 +51,12 @@ bool intersection(segment a, segment b){
             g = max(b.first.second, b.second.second);
             if(d<f)
                 flag = flag && (e>=f);
-            
+
             else if(d==f)
                 flag = flag &&1;
-            
+
             else
-                flag = flag && (g>=d); 
+                flag = flag && (g>=d);
             return flag;
         }
         return 1;
@@ -89,7 +89,7 @@ int main(int argc, char const *argv[])
         res = max(res, item);
     }
     cout << res;
-    
-    
+
+
     return 0;
 }

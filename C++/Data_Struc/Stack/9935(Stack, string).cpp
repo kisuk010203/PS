@@ -33,7 +33,7 @@ int main(){
             arr[stack_size-1-i] = st.top();
             st.pop();
         }
-        
+
         for(int i=0; i<stack_size; i++) cout << arr[i];
     }
 }

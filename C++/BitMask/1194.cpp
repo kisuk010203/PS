@@ -14,7 +14,7 @@ int main(){
     cin >> n >> m;
     for(int i=0; i<n; i++)
         cin >> maze[i];
-    
+
     int start_x, start_y;
     for(int i=0; i<n; i++){
         for(int j=0; j<m; j++){
@@ -49,8 +49,8 @@ int main(){
             if(in_bounds(x+x_diff[i], y+y_diff[i]) && (visited[x+x_diff[i]][y+y_diff[i]][keys] == 0) && (maze[x+x_diff[i]][y+y_diff[i]] != '#')){
                 que.push(make_tuple(x+x_diff[i], y+y_diff[i], cnt+1, keys));
                 visited[x+x_diff[i]][y+y_diff[i]][keys] = 1;
-            } 
-                
+            }
+
         }
     }
     cout << -1;

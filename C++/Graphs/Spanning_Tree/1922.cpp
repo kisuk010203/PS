@@ -22,14 +22,14 @@ int prim(){
                 parent[v] = u;
                 minWeight[v] = weight;
             }
-        }               
+        }
     }
     return ret;
 }
 
 int main(){
     ios::sync_with_stdio(false); cin.tie(NULL);
-    cin >> V >> E; 
+    cin >> V >> E;
     int a, b, weight;
     for(int i=0; i<E; i++){
         cin >> a >> b >> weight;

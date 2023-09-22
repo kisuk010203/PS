@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define INF INT_MAX
-int N, done; 
+int N, done;
 int cost[20][20];
 int dp[20][1<<20];
 int duty(int curr, int done_bit){
@@ -29,7 +29,7 @@ int main(int argc, char const *argv[])
         }
     }
     memset(dp, 0, sizeof(dp));
-    
+
     cout << duty(0, 0);
     return 0;
 }

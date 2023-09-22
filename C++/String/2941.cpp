@@ -30,7 +30,7 @@ int main(){
                 ans++, i++;
             else ans++;
             break;
-            
+
         default:
             ans++;
             break;

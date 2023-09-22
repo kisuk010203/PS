@@ -19,7 +19,7 @@ int main(int argc, char const *argv[])
     for(int dist=2; dist<N; dist++){
         for(int st=0; st<N; st++){
             if(st+dist>=N) break;
-            isPal[st][st+dist] = 
+            isPal[st][st+dist] =
                 (temp[st] == temp[st+dist]) && isPal[st+1][st+dist-1];
         }
     }

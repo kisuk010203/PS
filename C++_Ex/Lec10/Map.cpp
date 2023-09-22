@@ -17,7 +17,7 @@ int main() {
 
   pitcher_list.insert(std::pair<std::string, double>("Peer ", 2.95));
 
-  
+
   pitcher_list.insert(std::make_pair("Cha", 3.04));
   pitcher_list.insert(std::make_pair("Jang ", 3.05));
   pitcher_list.insert(std::make_pair("Hector ", 3.09));

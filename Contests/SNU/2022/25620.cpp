@@ -6,7 +6,7 @@ int main(int argc, char const *argv[])
     int N, Q; cin >> N >> Q;
     int zero_cnt = 0;
     priority_queue<ll, vector<ll>, greater<ll>> pq;
-    for(int i=0; i<N; i++){ 
+    for(int i=0; i<N; i++){
         ll temp; cin >> temp;
         pq.push(temp);
     }

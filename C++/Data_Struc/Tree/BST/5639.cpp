@@ -2,7 +2,7 @@
 using namespace std;
 int nodes[10000];
 void to_postorder(int start, int end){
-    if(start == end){ 
+    if(start == end){
         cout << nodes[start] << '\n';
         return;
     }

@@ -27,7 +27,7 @@ int main(){
             idx = i;
         }
     }
-    
+
     printf("%d\n", val);
     int ans[1000] = {0};
     for(int m = val; m>0; m--){

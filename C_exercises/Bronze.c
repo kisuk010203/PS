@@ -84,7 +84,7 @@
 //         printf("%d", (2*d[n])%1000000);
 //     }
 // }
-    
+
 #include <stdio.h>
 #define bound 1000000
 #define min(a,b) a>b?b:a
@@ -123,4 +123,3 @@ int main(){
     }
 
 }
-    

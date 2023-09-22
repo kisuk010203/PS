@@ -35,7 +35,7 @@ int main(int argc, char const *argv[]){
                 flag = flag || is_conn(i, j, mode);
             }
             if(flag) board[3*i+1][3*j+1] = '#';
-            if(is_conn(i, j, 0)) 
+            if(is_conn(i, j, 0))
                 board[3*i][3*j+1] = '#';
             if(is_conn(i, j, 1))
                 board[3*i+2][3*j+1] = '#';

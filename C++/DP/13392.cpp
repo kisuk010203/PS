@@ -11,7 +11,7 @@ ll setdp(int cur, int rot){
     int right = (cnum-goal[cur]+10)%10;
     if(cur == N-1) return dp[cur][rot] = min(left, right);
     if(dp[cur][rot] != -1) return dp[cur][rot];
-    return (dp[cur][rot] = 
+    return (dp[cur][rot] =
     min(setdp(cur+1, (rot+left)%10)+left, setdp(cur+1, rot)+right));
 }
 int main(int argc, char const *argv[])

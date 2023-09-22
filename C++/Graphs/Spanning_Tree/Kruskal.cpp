@@ -43,4 +43,3 @@ int kruskal(vector<pair<int, int>> &selected){
     }
     return ret;
 }
-

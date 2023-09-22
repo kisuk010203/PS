@@ -13,7 +13,7 @@ void update(ll node, ll start, ll end, ll idx, ll num){
     }
 }
 ll getcandy(ll node, ll start, ll end, ll idx){
-    if(start == end){ 
+    if(start == end){
         update(1, 0, MAX-1, start, -1);
         return start;
     }
@@ -40,4 +40,3 @@ int main(){
         }
     }
 }
-

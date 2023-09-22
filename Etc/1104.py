@@ -43,7 +43,7 @@
 # #                     s += knapsack[coinidx][item - coinlist[coinidx]]
 # #             knapsack[start].append(s)
 # #     print(knapsack[0][money])
-    
+
 # #2447
 # # N = int(input())
 # # starlist = [["*"]*N for _ in range(N)]
@@ -116,7 +116,7 @@
 #     if isPrime(n):
 #         factordict[n] += 1
 #         return
-    
+
 #     x = random.randint(1,2)
 #     y = x
 #     c = (random.randint(1,11)) % (n-1)
@@ -149,7 +149,7 @@
 #         for i in range(1, len(explist)+1):
 #             ans *= i
 #         print(ans)
-    
+
 # import sys
 # momax = 400000
 # k = int(sys.stdin.readline())

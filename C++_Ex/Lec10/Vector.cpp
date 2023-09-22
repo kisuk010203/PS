@@ -8,7 +8,7 @@ int main(){
     vec.push_back(40);
     // for(std::vector<int>::size_type i = 0 ; i<vec.size(); i++)
     //     std::cout << i <<"th element of vec : "<<vec[i] << std::endl;
-    
+
     //iterator
     // for(std::vector<int>::iterator itr = vec.begin(); itr!= vec.end(); ++itr)
     //     std::cout << *itr << std::endl;

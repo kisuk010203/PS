@@ -38,7 +38,7 @@ int main(int argc, char const *argv[])
         }
         for(int i=0; i<N; i++){
             if(!searched[i]){
-                if (dfs(i, i)) 
+                if (dfs(i, i))
                     TREE_CNT++;
             }
         }
@@ -50,6 +50,6 @@ int main(int argc, char const *argv[])
             else{
                 cout << "Case " << test_Cnt << ": A forest of " << TREE_CNT << " trees.\n";
             }
-        
+
     }
 }

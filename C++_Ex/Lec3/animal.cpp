@@ -29,7 +29,7 @@ void one_day_pass(Animal *animal) {
 void show_stat(Animal *animal){
     cout << animal->name <<endl;
     cout << "health : " << animal->health << endl;
-    
+
 }
 int main(){
     Animal* list[30];

@@ -62,9 +62,8 @@ int main() {
                     v2 = par[v2][i].first;
                 }
             }
-        
+
         if(v1 != v2) res+= (par[v1][0].second + par[v2][0].second);
         cout<<res<<"\n";
     }
 }
-

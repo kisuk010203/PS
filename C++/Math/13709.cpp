@@ -21,7 +21,7 @@ int main(){
             if(pivot >=0) mat[rnk] ^= mat[pivot];
             else continue;
         }
-        
+
         for(int i=0; i<n; i++){
             if(rnk != i && (mat[i] & 1ULL << lead)) mat[i] ^= mat[rnk];
         }rnk++;

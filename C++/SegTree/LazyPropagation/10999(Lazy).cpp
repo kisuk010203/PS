@@ -50,10 +50,10 @@ int main(){
     cout.tie(NULL);
     int n, m, k;
     cin >> n >> m >> k;
-    
+
     for(int i=0; i<n; i++) cin >> arr[i];
     init(1, 0, n-1);
-    
+
     for(int i=0; i<m+k; i++){
         int mode; cin >> mode;
         if(mode == 1){

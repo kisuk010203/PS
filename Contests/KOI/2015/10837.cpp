@@ -12,6 +12,6 @@ int main(int argc, char const *argv[])
             cout << "0\n";
         else cout << "1\n";
     }
-    
+
     return 0;
 }

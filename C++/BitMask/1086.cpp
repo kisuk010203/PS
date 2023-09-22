@@ -18,7 +18,7 @@ int main(int argc, char const *argv[])
     dp[0][0] = 1;
     expsMOD[0] = 1;
     cin >> N;
-    
+
     for(ll i=0; i<N; i++){
         string temp; cin >> temp;
         stringset.push_back(temp);

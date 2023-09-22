@@ -1,31 +1,31 @@
 #include <bits/stdc++.h>
-#define INF 1e9 
-using namespace std; 
+#define INF 1e9
+using namespace std;
 
 int N, cnt;
 int cost[16][16];
-int dp[16][1 << 16]; 
+int dp[16][1 << 16];
 
 int travel(int curr, int visited_bit){
 	if(visited_bit == cnt){
 		if(cost[curr][0])
 			return cost[curr][0];
-		return INF; 
+		return INF;
 	}
 
 	if(dp[curr][visited_bit] != 0) return dp[curr][visited_bit];
 
-	dp[curr][visited_bit] = INF; 
+	dp[curr][visited_bit] = INF;
 	for(int i = 0; i < N; i++){
 		if(cost[curr][i] == 0 || (visited_bit & (1 << i))) continue;
 
-		int temp = travel(i, visited_bit | 1 << i); 
-		dp[curr][visited_bit] = min(dp[curr][visited_bit], cost[curr][i] + temp); 
+		int temp = travel(i, visited_bit | 1 << i);
+		dp[curr][visited_bit] = min(dp[curr][visited_bit], cost[curr][i] + temp);
 	}
 	return dp[curr][visited_bit];
 }
 
-int main(){ 
+int main(){
 	ios::sync_with_stdio(0);
     cin.tie(0);
 
@@ -34,8 +34,8 @@ int main(){
 
 	for(int i = 0; i < N; i++)
 		for(int j = 0; j < N; j++)
-			cin >> cost[i][j]; 
-	
+			cin >> cost[i][j];
+
 	memset(dp, 0, sizeof(dp));
-	cout << travel(0, 1); 
+	cout << travel(0, 1);
 }

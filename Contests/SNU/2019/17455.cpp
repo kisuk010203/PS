@@ -21,7 +21,7 @@ char get_next(char a) {
 
 
 
-        
+
     case 'H':
         return 'K';
     default:

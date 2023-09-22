@@ -57,5 +57,5 @@ int main(){
             cout << points[i].first << ' ';
         cout << '\n';
     }
-    
+
 }

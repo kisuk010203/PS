@@ -3,7 +3,7 @@
 #include <set>
 #include <algorithm>
 using namespace std;
-int n, m; 
+int n, m;
 set<int> seq_set;
 vector<int> seq_vec;
 vector<int> curr(10);

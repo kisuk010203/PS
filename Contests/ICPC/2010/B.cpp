@@ -11,5 +11,5 @@ int main(){
         string str; cin >> str;
 
     }
-    
+
 }

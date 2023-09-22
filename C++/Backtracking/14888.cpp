@@ -18,7 +18,7 @@ void backtracking(int count){
         for(int i=0; i<n-1; i++){
             int temp = arr[i+1], op = back_seq[i];
             switch(op){
-                case 0 : 
+                case 0 :
                     res += temp; break;
                 case 1 :
                     res -= temp; break;

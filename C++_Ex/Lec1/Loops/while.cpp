@@ -9,7 +9,7 @@ int main() {
     if (lucky_number == user_input) {
       std::cout << "Correct~~" << std::endl;
       break;
-    } 
+    }
     else {
       std::cout << "Think again~" << std::endl;
     }

@@ -24,7 +24,7 @@ int main(){
                         dp[start][len][state]%=MOD;
                     }
                 }
-                
+
             }
         }
     }

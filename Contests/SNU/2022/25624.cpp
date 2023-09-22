@@ -35,7 +35,7 @@ int main(int argc, char const *argv[])
         res *= cnt;
     }
     if(res != M) flag = false;
-    if(flag){ 
+    if(flag){
         cout << "YES" << '\n';
         for(int i=0; i<N; i++){
             for(int j=0; j<26; j++){

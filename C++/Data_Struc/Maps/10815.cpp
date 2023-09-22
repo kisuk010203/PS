@@ -16,6 +16,6 @@ int main(int argc, char const *argv[]){
         int temp; cin >> temp;
         cout << (cardmap.find(temp) != cardmap.end()) << ' ';
     }
-    
+
     return 0;
 }

@@ -20,7 +20,7 @@ void percolateDown(int i, int n){
 void heapsort(int n){
     for(int i=n/2; i>= 1;i--){
         percolateDown(i, n);
-        
+
     }cout << cnt << endl;
     for(int size=n; size>=2; size--){
         swap(arr[1], arr[size-1]);

@@ -26,7 +26,7 @@ void sethouse(int start){
     }
     else if(start == 0){
         rr[start] = red[start]; bb[start] = blue[start]; gg[start] = green[start];
-        rb[start] = br[start] = bg[start] = 
+        rb[start] = br[start] = bg[start] =
         gb[start] = rg[start] = gr[start] = 10000001;
     }
     else{

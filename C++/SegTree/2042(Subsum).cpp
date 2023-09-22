@@ -27,7 +27,7 @@ ll getsum(int node, int start, int end, int left, int right){
 int main(){
     int n, m, k;
     std::cin >> n >> m >> k;
-    
+
     for(int i=0; i<n; i++) std::cin >> arr[i];
     init(1, 0, n-1);
     for(int i=0; i<m+k; i++){

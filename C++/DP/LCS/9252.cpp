@@ -15,12 +15,12 @@ int main(){
         dp[0][j] = max((int)(s1[0] == s2[j]), dp[0][j-1]);
         if(dp[0][j] == (s1[0] == s2[j])) prev[0][j] = s1[0] - 'A';
         else prev[0][j] = -2;
-    } 
+    }
     for(int i=1; i<n1; i++){
         dp[i][0] = max((int)(s1[i] == s2[0]), dp[i-1][0]);
         if(dp[i][0] == (s1[i] == s2[0])) prev[i][0] = s1[i] - 'A';
         else prev[i][0] = -1;
-    } 
+    }
     for(int i=1; i<n1; i++){
         for(int j=1; j<n2; j++){
             dp[i][j] = max_3(dp[i-1][j], dp[i][j-1], (int) (s1[i] == s2[j])+dp[i-1][j-1]);
@@ -37,7 +37,7 @@ int main(){
         if(prev[x][y] >= 0){
             ans--;
             cout << (char)('A' + prev[x][y]);
-        } 
+        }
         else if(prev[x][y] == -1) x--;
         else y--;
     }

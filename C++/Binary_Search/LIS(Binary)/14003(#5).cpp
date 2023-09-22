@@ -7,7 +7,7 @@ int main(){
     for(int i=0; i<n; i++) scanf("%d", &seq[i]);
     vector<int> temp(n);
     vector<int> pos(n);
-    
+
     int vec_size = 1;
     temp[0] = seq[0];
     for(int i=1; i<n; i++){

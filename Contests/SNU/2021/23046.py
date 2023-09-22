@@ -26,9 +26,3 @@ for item in range(len(s)-1, -1, -1):
             neg[num_cnt] = pos[num_cnt+1]
         num_cnt -= 1
         num_rev = 0
-
-
-
-
-
-

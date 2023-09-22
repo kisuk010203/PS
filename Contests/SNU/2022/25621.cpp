@@ -23,7 +23,7 @@ int main(int argc, char const *argv[])
                     quo += (K+sel)/MOD;
                 }
                 K = (K+sel)%MOD;
-                
+
             }
             else if(op1[0] == '-'){
                 ll sel = min(num1, num2);
@@ -57,14 +57,14 @@ int main(int argc, char const *argv[])
                 quo += (K+num1)/MOD;
             }
             K = (K + num1) % MOD;
-            
+
         }
         else if(op1[0] == '-' && op2[0] == '+'){
             if(quo < N+1){
                 quo += (K+num2)/MOD;
             }
             K = (K + num2) % MOD;
-            
+
         }
         else if(op1[0] == '-' && op2[0] == '*'){
             if(num2 == 0){
@@ -133,7 +133,7 @@ int main(int argc, char const *argv[])
                     quo += (K+num2)/MOD;
                 }
                 K = (K + num2) % MOD;
-                
+
             }
             else if(quo > 0 || K*(num1-1) > num2){
                 if(quo < N+1){
@@ -147,7 +147,7 @@ int main(int argc, char const *argv[])
                     quo += (K+num2)/MOD;
                 }
                 K = (K + num2) % MOD;
-                
+
             }
         }
     }

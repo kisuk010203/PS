@@ -22,7 +22,7 @@ int SCC(int start){
             scc_num[temp] = scc_cnt;
             if(temp == start) break;
         }
-        scc_cnt++;    
+        scc_cnt++;
     }
     return ret;
 }

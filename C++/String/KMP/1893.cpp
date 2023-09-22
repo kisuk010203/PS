@@ -11,7 +11,7 @@ void initPi(const string& P){
         while(j>0 && P[i]!=P[j])
             j = pi[j-1];
         if(P[i] == P[j]) pi[i] = ++j;
-        
+
     }
 }
 bool KMP(const string& order, unordered_map<char, int> ordermap, const string& T, const string& P){
@@ -33,7 +33,7 @@ bool KMP(const string& order, unordered_map<char, int> ordermap, const string& T
         if(search == 0){
             start++; continue;
         }
-        start = start + search - pi[search-1]; 
+        start = start + search - pi[search-1];
         search = pi[search-1];
     }
     return ans==1;
@@ -49,7 +49,7 @@ int main(){
         for(int i=0; i<order.length(); i++){
             ordermap.emplace(order[i], i);
         }
-        string T, P; cin >> P >> T; 
+        string T, P; cin >> P >> T;
         n = T.length(), m = P.length();
         memset(pi, 0, sizeof(pi));
         initPi(P);
@@ -63,7 +63,7 @@ int main(){
             }
         }
         if(ans_vec.size() == 0) cout << "no solution\n";
-        else if(ans_vec.size() == 1) 
+        else if(ans_vec.size() == 1)
             cout << "unique: " << ans_vec[0] << '\n';
         else{
             cout << "ambiguous:";

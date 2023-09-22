@@ -29,7 +29,7 @@ int main(int argc, char const *argv[])
     for(auto item : count_name){
         char target = item.first;
         C = min(C, (count_dungeon[target].size())/count_name[target]);
-        
+
     }
     cout << C;
     return 0;

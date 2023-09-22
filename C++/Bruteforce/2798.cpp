@@ -9,7 +9,7 @@ int main(int argc, char const *argv[]){
         for(int j=i+1; j<n; j++){
             for(int k=j+1; k<n; k++){
                 int temp = arr[i] +  arr[j] + arr[k];
-                if(temp <= m && temp > max_res) 
+                if(temp <= m && temp > max_res)
                     max_res = temp;
             }
         }

@@ -26,7 +26,7 @@ public class Cal{
 			char c = exp.charAt(i);
 			if(c == '=') break;
 			if(c == ' ') continue;
-			if(Character.isDigit(c)){ 
+			if(Character.isDigit(c)){
 				while(Character.isDigit(c)){
 					result.append(c);
 					i++;
@@ -36,7 +36,7 @@ public class Cal{
 				result.append(' ');
 				i--;
 			}
-			else if(c == '('){ 
+			else if(c == '('){
 				stack.push(c);
 			}
 			else if(c == ')'){
@@ -76,7 +76,7 @@ public class Cal{
 			result.append(' ');
 		}
 		return result.toString(); // trim last space
-	}	
+	}
 	public static long evaluate(String postString) throws Exception{
 		Stack<Long> stack = new Stack<>();
 		for (int i = 0; i < postString.length(); i++) {
@@ -127,7 +127,7 @@ public class Cal{
 					throw new Exception();
 				}
 			}
-			
+
 		}
 		try {
 			if(stack.size() != 1) throw new Exception(); // if stack empty or many left
@@ -163,8 +163,7 @@ public class Cal{
 			//System.out.println(postString);
 			System.out.println(ans);
 		} catch (Exception e) {
-			System.out.println("ERROR");	
+			System.out.println("ERROR");
 		};
 	}
 }
-

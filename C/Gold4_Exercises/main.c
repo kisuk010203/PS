@@ -208,7 +208,7 @@ void backtracking(){
         if(isPossible(x, y, i)){
             arr[x][y] = i;
             backtracking();
-        } 
+        }
         arr[x][y] = 0;
     }
 }

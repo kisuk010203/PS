@@ -9,7 +9,7 @@ int main(int argc, char const *argv[])
     int t; cin >> t;
     while (t--){
         string mode; cin >> mode;
-        int elm; 
+        int elm;
         if(mode != "all" && mode != "empty"){
             cin >> elm;
         }

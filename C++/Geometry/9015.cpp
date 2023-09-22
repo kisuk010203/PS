@@ -47,7 +47,7 @@ int main(){
                 p pt4 = make_pair(pt2.first - y_diff, pt2.second + x_diff);
                 if(edgemap.find(pt3)!=edgemap.end() && edgemap.find(pt4) != edgemap.end())
                     ans = area;
-                
+
             }
         }
         cout << ans << '\n';

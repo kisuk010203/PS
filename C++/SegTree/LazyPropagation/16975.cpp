@@ -50,7 +50,7 @@ int main(){
     cout.tie(NULL);
     int n, m, k;
     cin >> n;
-    
+
     for(int i=0; i<n; i++) cin >> arr[i];
     init(1, 0, n-1);
     cin >> m;

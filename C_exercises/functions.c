@@ -18,7 +18,7 @@
 //             isPrime[j] = 0;
 //         }
 //     }
-    
+
 //     int cnt = 0;
 //     for(int i = 2; i<=B; i++){
 //         if(isPrime[i] == 1){
@@ -93,10 +93,10 @@
 // 	}
 // 	for(node *n = g->list[start]; n; n = n->next)
 // 		distance[n->data] = n->edgenum;
-		
+
 // 	searched[start] = 1;
 // 	distance[start] = 0;
-	
+
 // 	for(int i = 0; i<g->v_num -1; i++){
 // 		int nextFound = findMin(g);
 // 		searched[nextFound] = 1;
@@ -106,10 +106,10 @@
 // 					distance[n->data] = distance[nextFound] + n->edgenum;
 // 				}
 // 			}
-			
+
 // 		}
 // 	}
-	
+
 // }
 // void init(graph *g){
 // 	g->v_num = 0 ;
@@ -144,7 +144,7 @@
 //     }
 // 	dijkstra(g,start-1);
 // 	printAll(g);
-	
+
 // }
 
 
@@ -175,7 +175,7 @@ void dfs(int start){
 }
 int main(){
 	scanf("%d", &n);
-	
+
 
 	int cntodd = 0;
 	cnt=0;

@@ -20,7 +20,7 @@ int query(int left, int right, int k){
             ret += tree[left].end() - upper_bound(tree[left].begin(), tree[left].end(), k);
             left++;
         }
-        if(right%2 == 0){ 
+        if(right%2 == 0){
             ret += tree[right].end() - upper_bound(tree[right].begin(), tree[right].end(), k);
             right--;
         }

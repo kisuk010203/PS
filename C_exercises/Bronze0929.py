@@ -60,7 +60,7 @@
 #     for i in range(10):
 #         d[i] += pow(10, n-2) * (n-1)
 #     d[0] -= (pow(10, n-1) - 1)//9
-    
+
 # for i in range(1, ls[0]):
 #     d[i] += pow(10, n-1)
 #     for j in range(10):
@@ -112,7 +112,7 @@
 #         if s[i] == '1':
 #             mul = (mul * d[i]) % m
 #     return mul
-# def summodPow(N): 
+# def summodPow(N):
 #     s, sum, ba = "", 0, 1
 #     while N>0:
 #         s = str(N%2) + s
@@ -203,13 +203,13 @@
 #             return 2
 #     if n>146858:
 #         return 3
-    
+
 #     if n <= 146858:
 #         for i in ls:
 #             for j in ls:
 #                 if n-i-j in ls:
 #                     return 3
-#     if n>130:    
+#     if n>130:
 #         return 4
 
 #     for i in ls:
@@ -217,7 +217,7 @@
 #                 for k in ls:
 #                     if n-i-j-k in ls:
 #                         return 4
-#     return 5 
+#     return 5
 # print(minHex(N))
 
 # n, r, c = map(int, input().split())

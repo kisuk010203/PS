@@ -33,7 +33,7 @@ int main(int argc, char const *argv[]){
     stable_sort(lines, lines+N, comparator);
     ll res = 0;
     for(int i=0; i<N; i++){
-        ll mul = 1; 
+        ll mul = 1;
         for(int j=i+1; j<N; j++)
             if(intersection(lines[i].first, lines[j].first))
                 mul++;

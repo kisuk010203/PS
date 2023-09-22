@@ -41,9 +41,9 @@ void printStack(charStack *s){
 void *changeSeq(charStack *s){
 	charStack *temp = initCS();
 	charStack *seq = initCS();
-	
+
 	for(int i = 0 ; s->data[i] ; i++){
-		
+
 		char c = s->data[i];
 		switch(c){
 			case '(' :

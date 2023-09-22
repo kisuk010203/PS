@@ -73,7 +73,7 @@
 # alph = given.split()
 # alph.sort()
 # def backtracking(idx, nv, nc, seq):
-    
+
 #     if idx == l:
 #         if nv>=1 and nc>=2:
 #             print(seq)
@@ -92,7 +92,7 @@
 #                 else:
 #                     backtracking(idx+1, nv, nc+1, seq+alph[i])
 # backtracking(0, 0, 0, "")
-    
+
 # import sys
 # n = int(sys.stdin.readline())
 # ls = []
@@ -108,7 +108,3 @@
 #         given.append(backtracking(matlist[:i]+matlist[i+1:], val+matlist[i-1]*matlist[i]*matlist[i+1], lenList-1))
 #     return max(given)
 # print(backtracking(ls, 0, len(ls)))
-        
-    
-
-        
