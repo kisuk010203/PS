@@ -22,7 +22,7 @@
 # bfs(0)
 # for i in range(1, n):
 #     print(parentlist[i]+1)
-        
+
 # import sys
 # sys.setrecursionlimit(10**6)
 # n = int(sys.stdin.readline())
@@ -58,8 +58,8 @@
 #     if item[1] > m:
 #         m = item[1]
 # print(m)
-    
-    
+
+
 # import sys
 # n, m, start = map(int, sys.stdin.readline().split())
 # nodelist = [[] for _ in range(n)]
@@ -128,7 +128,7 @@
 #                 continue
 #             if worldmap[idxx][idxy] == 1:
 #                 dfs(worldmap, idxx, idxy)
-    
+
 # while True:
 #     a, b = map(int, sys.stdin.readline().split())
 #     if a == 0 and b == 0:
@@ -142,7 +142,7 @@
 #         dfs(worldmap, startx, starty)
 #         cnt += 1
 #     print(cnt)
-        
+
 # import sys
 # vert, edge = map(int, sys.stdin.readline().split())
 # nodelist = [[] for _ in range(vert)]
@@ -161,7 +161,7 @@
 #     for item in nodelist[start]:
 #         if not searchlist[item]:
 #             dfs(item)
-    
+
 # cnt = 0
 # while leftunsearched():
 #     start = leftunsearched()-1
@@ -178,7 +178,7 @@
 #         Y, X = y+dy, x+dx
 #         if Y in range(m) and X in range(n) and nodelist[Y][X] == 0:
 #             dfs(Y, X)
-            
+
 # m, n= map(int, input().split())
 # nodelist = [list(map(int, list(input()))) for _ in range(m)]
 # d = [(-1, 0), (1, 0), (0, -1), (0, 1)]
@@ -187,7 +187,7 @@
 #         dfs(m-1, j)
 # print("YES" if 2 in nodelist[0] else "NO")
 
-#1167
+# 1167
 # from collections import deque
 # import sys
 # def bfs(x):
@@ -215,11 +215,12 @@
 # item = bfs(0)
 # print(bfs(item[0])[1])
 
-#1103
+# 1103
 import sys
+
 sys.setrecursionlimit(10**6)
 n = int(sys.stdin.readline())
-adjdict = {i:[] for i in range(n)}
+adjdict = {i: [] for i in range(n)}
 for i in range(n):
     s = list(map(int, sys.readline().split()))
     for idx in range(n):
@@ -229,8 +230,9 @@ deglist = [sum(item[1]) for item in adjdict[j] for j in range(n)]
 eulerlist = []
 cntodd = 0
 for deg in deglist:
-    if deg%2 == 1:
+    if deg % 2 == 1:
         cntodd += 1
+
 
 def dfs(start):
     end = 0
@@ -241,12 +243,14 @@ def dfs(start):
             deglist[start] -= 1
             deglist[end] -= 1
             dfs(end)
-        elif end < n-1:
+        elif end < n - 1:
             end += 1
     eulerlist.append(start)
+
+
 if cntodd != 0:
     print(-1)
 else:
     dfs(0)
     for item in eulerlist[::-1]:
-        print(item+1, end = " ")
+        print(item + 1, end=" ")
