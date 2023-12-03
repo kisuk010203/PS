@@ -56,4 +56,7 @@
     "<C-c>": false,
   },
   "vim.useSystemClipboard": true,
+  "files.watcherExclude": {
+    "**/target": true
+  },
 }
