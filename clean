@@ -1,0 +1,7 @@
+# shell script that deletes files in the current directory that starts with a digit.
+#!bin/bash
+for file in [0-9]*; do
+    if [ -f "$file" ]; then
+        rm "$file"
+    fi
+done
