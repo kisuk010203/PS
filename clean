@@ -1,3 +1,7 @@
 #!/bin/bash
 
-find . -type d -name ".*" -prune -o -type f -name '[0-9]*' ! -name '*.c' ! -name '*.cpp' ! -name '*.py' ! -name '*.java' ! -name '*.rs' -exec rm -f {} +
+for file in [0-9]*; do
+    if [[ ! $file =~ \.c$|\.cpp$|\.py$|\.java$|\.rs$ ]]; then
+        rm -f "$file"
+    fi
+done
