@@ -60,4 +60,7 @@
   "files.watcherExclude": {
     "**/target": true
   },
+  "cSpell.words": [
+    "segtree"
+  ],
 }
