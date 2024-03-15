@@ -1,6 +1,6 @@
 #!/bin/bash
 
-result=$(find . -type f -name "$1.cpp" 2>/dev/null)
+result=$(find . -type f -name "$1.*" 2>/dev/null)
 
 if [ -n "$result" ]; then
     echo "File Found at: $result"
@@ -10,6 +10,8 @@ if [ -n "$result" ]; then
     elif [[ "$result" == *.c ]]; then
         filename=$(basename "$result" .c)
         gcc "$result" -o "$filename" && "./$filename"
+    elif [[ "$result" == *.py ]]; then
+        python "$result"
     else
         echo "Not a c or cpp file"
     fi
