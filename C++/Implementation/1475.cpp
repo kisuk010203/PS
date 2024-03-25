@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     int ans = 0;
     unordered_map<int, int> number_map;
     for (int i = 0; i < 9; i++) {
@@ -19,7 +19,7 @@ int main(int argc, char const *argv[]) {
             number_map[item]++;
         }
     }
-    for (const auto &pair : number_map) {
+    for (const auto& pair : number_map) {
         ans = max(ans, pair.second);
     }
     cout << ans << "\n";

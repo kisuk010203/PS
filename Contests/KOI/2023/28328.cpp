@@ -64,7 +64,7 @@ int main() {
         adj[b].push_back(a);
     }
 
-    dfs(1, 0); // initialize tree structure
+    dfs(1, 0);  // initialize tree structure
     memset(dp, -1, sizeof(dp));
     memset(is_essential, true, sizeof(is_essential));
     memset(visited, false, sizeof(visited));

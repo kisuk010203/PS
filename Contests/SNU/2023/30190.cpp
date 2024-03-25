@@ -4,7 +4,8 @@ using namespace std;
 typedef long long ll;
 ll hanoi[1000000];
 ll original_hanoi(ll n) {
-    if(n == 0) return 1;
+    if (n == 0)
+        return 1;
     ll temp = original_hanoi(n / 2);
     if (n % 2 == 0)
         return (temp * temp) % MOD;

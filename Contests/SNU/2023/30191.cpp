@@ -24,11 +24,12 @@ int main() {
 
     int curr_s = 0, curr_u = 0;
     while (!block_size.empty()) {
-        while(curr_s == 0 || curr_u ==0){
+        while (curr_s == 0 || curr_u == 0) {
             p last = block_size.back();
-            if(last.first) curr_s += last.second;
-            else curr_u += last.second;
+            if (last.first)
+                curr_s += last.second;
+            else
+                curr_u += last.second;
         }
-
     }
 }

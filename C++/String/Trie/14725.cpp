@@ -2,11 +2,13 @@
 using namespace std;
 typedef struct trie {
     string item;
-    vector<trie *> children;
+    vector<trie*> children;
 } trie;
 
-bool comp_trie(const trie *a, const trie *b) { return a->item < b->item; }
-void insert(trie *root, vector<string> key, int index) {
+bool comp_trie(const trie* a, const trie* b) {
+    return a->item < b->item;
+}
+void insert(trie* root, vector<string> key, int index) {
     if (index == key.size())
         return;
     for (auto child : root->children) {
@@ -15,12 +17,12 @@ void insert(trie *root, vector<string> key, int index) {
             return;
         }
     }
-    trie *new_node = new trie;
+    trie* new_node = new trie;
     new_node->item = key[index];
     root->children.push_back(new_node);
     insert(new_node, key, index + 1);
 }
-void print_trie(trie *root, int depth) {
+void print_trie(trie* root, int depth) {
     if (depth >= 0) {
         for (int i = 0; i < depth; i++) {
             cout << "--";
@@ -38,7 +40,7 @@ int main() {
     cout.tie(0);
     ios_base::sync_with_stdio(false);
 
-    trie *dummy_root = new trie;
+    trie* dummy_root = new trie;
     dummy_root->item = "dummy";
 
     int n;

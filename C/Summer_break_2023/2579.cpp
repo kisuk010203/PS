@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     int dp[301][2];
     vector<int> floor_values;
     memset(dp, 0, sizeof(dp));

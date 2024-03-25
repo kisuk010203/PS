@@ -54,7 +54,8 @@ int main() {
     int n;
     cin >> n;
     for (int i = 0; i < n; i++) {
-        int a, b, c; cin >> a >> b >> c;
+        int a, b, c;
+        cin >> a >> b >> c;
         int res = all_detector(a, b, c);
         if (res == INVALID) {
             cout << "invalid\n";

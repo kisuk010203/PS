@@ -13,9 +13,9 @@ pair<int, int> prefix_and_suffix(string word, char key) {
     }
     return {prefix, suffix};
 }
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     int n;
-    cin >> n; // Read the value of n from input
+    cin >> n;  // Read the value of n from input
     string candidates[n];
     int prefix[26];
     int suffix[26];
@@ -29,7 +29,7 @@ int main(int argc, char const *argv[]) {
     memset(suffix, INF, sizeof(suffix));
     memset(answer, INF / 2, sizeof(answer));
 
-    for (string &candidate : candidates) {
+    for (string& candidate : candidates) {
         int len = candidate.length();
 
         for (int key = 0; key < 26; key++) {

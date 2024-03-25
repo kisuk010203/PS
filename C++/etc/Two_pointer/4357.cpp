@@ -10,7 +10,9 @@ ll get_power(ll base, ll prime, ll expo) {
         return (temp * temp) % prime;
     return ((temp * temp) % prime) * base % prime;
 }
-ll get_inverse(ll base, ll prime) { return get_power(base, prime, prime - 2); }
+ll get_inverse(ll base, ll prime) {
+    return get_power(base, prime, prime - 2);
+}
 
 int main() {
     cin.tie(0);

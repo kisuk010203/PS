@@ -42,7 +42,7 @@ int main() {
             if (a.first.second == b.first.second)
                 return a.first.first > b.first.first;
             return a.first.second < b.first.second;
-        }); // sorted by y
+        });  // sorted by y
         for (int i = 0; i < n; i++)
             arr[brr[i].second].second = i;
         sort(arr, arr + n, [](pll a, pll b) -> bool {
@@ -50,7 +50,7 @@ int main() {
                 return a.second > b.second;
             else
                 return a.first < b.first;
-        }); // sorted by x
+        });  // sorted by x
         ll ans = 0;
         for (int i = 0; i < n; i++) {
             ans += query(arr[i].second + 1, n - 1, 0, n - 1, 1);

@@ -3,7 +3,7 @@ using namespace std;
 #define INF 10000000
 #define MAX 101
 bool use_date[MAX];
-int dp[MAX][MAX]; // date, coupon
+int dp[MAX][MAX];  // date, coupon
 int n, m;
 int ans;
 void setdp(int date, int coupon, int cost) {

@@ -13,5 +13,5 @@ int main() {
         b = a + b;
         a = temp;
     }
-    cout << 2*b << "\n";
+    cout << 2 * b << "\n";
 }

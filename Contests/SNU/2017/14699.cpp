@@ -3,7 +3,9 @@ using namespace std;
 #define MAX 5001
 int height[MAX];
 int dp[MAX];
-bool comp(int i, int j) { return height[i] > height[j]; }
+bool comp(int i, int j) {
+    return height[i] > height[j];
+}
 int main() {
     cin.tie(0);
     cout.tie(0);

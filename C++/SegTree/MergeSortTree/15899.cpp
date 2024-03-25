@@ -14,8 +14,9 @@ typedef struct {
 } Node;
 
 Node nodes[MAX_N];
-vector<int> adj[MAX_N];         // adj list by index
-vector<int> merge_tree[sz * 2]; // this only consists of colors, by preorder_idx
+vector<int> adj[MAX_N];  // adj list by index
+vector<int>
+    merge_tree[sz * 2];  // this only consists of colors, by preorder_idx
 unordered_map<int, int> preorder_to_name;
 int n, q, c;
 int counter = 0;

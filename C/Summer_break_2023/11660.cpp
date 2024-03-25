@@ -3,7 +3,7 @@ using namespace std;
 typedef long long ll;
 int n, m;
 ll accum[1025][1025];
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     cin.tie(0);
     cout.tie(0);
     ios_base::sync_with_stdio(false);

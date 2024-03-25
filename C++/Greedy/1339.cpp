@@ -6,7 +6,9 @@ typedef long long ll;
 unordered_map<char, int> char_to_int;
 vector<char_int_pair> sort_vector;
 
-bool comp(char_int_pair a, char_int_pair b) { return a.second > b.second; }
+bool comp(char_int_pair a, char_int_pair b) {
+    return a.second > b.second;
+}
 void add_or_create(char key, int val) {
     if (char_to_int.find(key) == char_to_int.end()) {
         char_to_int[key] = val;
@@ -32,7 +34,7 @@ int main() {
         }
     }
 
-    for (const auto &item : char_to_int) {
+    for (const auto& item : char_to_int) {
         sort_vector.push_back({item.first, item.second});
     }
 

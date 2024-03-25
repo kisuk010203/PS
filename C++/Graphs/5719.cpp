@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef pair<int, int> pii; // destination, weight
+typedef pair<int, int> pii;  // destination, weight
 #define MAX_V 500
 
 int n, m;
@@ -11,11 +11,11 @@ bool visit_dfs[MAX_V];
 int parent[MAX_V];
 int dist[MAX_V];
 
-typedef struct path{
+typedef struct path {
     int parent;
     int dest;
     int weight;
-    bool operator()(const path &a, const path &b) {
+    bool operator()(const path& a, const path& b) {
         return a.weight > b.weight;
     }
 } path;
@@ -45,7 +45,7 @@ void dijkstra(int start) {
 }
 
 void delete_all_edges(int node, int cost, int dest) {
-    for (auto &child : reverse_adj[node]) {
+    for (auto& child : reverse_adj[node]) {
         int next = child.first;
         int weight = child.second;
         if (dist[next] + cost + weight == dist[dest]) {
@@ -82,13 +82,13 @@ int main() {
         dijkstra(start);
         memset(visit_dfs, 0, sizeof(visit_dfs));
         delete_all_edges(dest, 0, dest);
-        
+
         for (int i = 0; i < n; i++) {
             adj[i].clear();
         }
         for (int i = 0; i < n; i++) {
             for (auto edge : reverse_adj[i]) {
-                if (edge.first != -1)  
+                if (edge.first != -1)
                     adj[edge.first].push_back({i, edge.second});
             }
         }

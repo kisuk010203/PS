@@ -43,7 +43,7 @@ int main() {
                             alive[j] = false;
                     }
 
-                } else { // s == 0
+                } else {  // s == 0
                     for (int j = 0; j < n; j++) {
                         if (robots[j][i] == 'R')
                             alive[j] = false;
@@ -60,9 +60,9 @@ int main() {
                 alive_robot = i + 1;
             }
         }
-        if (alive_count == 1){
+        if (alive_count == 1) {
             cout << alive_robot << "\n";
-        }
-        else cout << "0\n";
+        } else
+            cout << "0\n";
     }
 }

@@ -15,7 +15,7 @@ bool needs_search(int i, int j, int idx) {
     return answer_board[i + dx[idx]][j + dy[idx]] == 0 &&
            board[i + dx[idx]][j + dy[idx]] == 1;
 }
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
 
     cin >> n >> m;
     p start;

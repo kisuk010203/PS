@@ -4,9 +4,13 @@ typedef struct talk {
     int due;
     int weight;
 } talk;
-bool comp(const talk &a, const talk &b) { return a.due > b.due; }
+bool comp(const talk& a, const talk& b) {
+    return a.due > b.due;
+}
 struct comp_pq {
-    bool operator()(const talk &a, const talk &b) { return a.weight < b.weight; }
+    bool operator()(const talk& a, const talk& b) {
+        return a.weight < b.weight;
+    }
 };
 int main() {
     cin.tie(0);
@@ -22,7 +26,7 @@ int main() {
         talks.push_back({d, w});
     }
 
-    sort(talks.begin(), talks.end(), comp); // sort talk decreasing due
+    sort(talks.begin(), talks.end(), comp);  // sort talk decreasing due
     int due_idx = 0;
     long long ret = 0;
     for (int due_date = 10000; due_date; due_date--) {

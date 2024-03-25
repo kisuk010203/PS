@@ -12,24 +12,19 @@ bool has_cycle;
 
 char get_next(char a) {
     switch (a) {
-    case 'K':
-        return 'D';
-    case 'D':
-        return 'H';
+        case 'K':
+            return 'D';
+        case 'D':
+            return 'H';
 
-
-
-
-
-
-    case 'H':
-        return 'K';
-    default:
-        return ' ';
+        case 'H':
+            return 'K';
+        default:
+            return ' ';
     }
 }
 
-void get_zero_in_degree(queue<int> &top_sort_queue) {
+void get_zero_in_degree(queue<int>& top_sort_queue) {
     for (int i = 0; i < n; i++) {
         if (in_degree[i] == 0 && !top_sort_done[i]) {
             top_sort_queue.push(i);
@@ -56,13 +51,13 @@ void do_top_sort() {
             }
         }
     }
-    for(int i=0; i<n; i++){
-        if(!top_sort_done[i])
+    for (int i = 0; i < n; i++) {
+        if (!top_sort_done[i])
             has_cycle = true;
     }
 }
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     cin.tie(0);
     cout.tie(0);
     ios_base::sync_with_stdio(false);

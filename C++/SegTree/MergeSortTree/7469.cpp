@@ -37,10 +37,10 @@ int smaller_than_target_query(int left, int right, int target) {
 int query(int left, int right, int k) {
     int start = -1e9;
     int end = 1e9;
-    while(start <= end) {
+    while (start <= end) {
         int mid = (start + end) / 2;
         int res = smaller_than_target_query(left, right, mid);
-        if(res < k)
+        if (res < k)
             start = mid + 1;
         else
             end = mid - 1;

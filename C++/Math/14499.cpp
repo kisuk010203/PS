@@ -47,20 +47,20 @@ void move_dice(int move) {
     if (!is_valid(move))
         return;
     switch (move) {
-    case 1:
-        move_east();
-        break;
-    case 2:
-        move_west();
-        break;
-    case 3:
-        move_north();
-        break;
-    case 4:
-        move_south();
-        break;
-    default:
-        break;
+        case 1:
+            move_east();
+            break;
+        case 2:
+            move_west();
+            break;
+        case 3:
+            move_north();
+            break;
+        case 4:
+            move_south();
+            break;
+        default:
+            break;
     }
     dice_x += dx[move];
     dice_y += dy[move];
@@ -69,7 +69,7 @@ void move_dice(int move) {
     cout << dice[0] << "\n";
 }
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     cin.tie(0);
     cout.tie(0);
     ios_base::sync_with_stdio(false);

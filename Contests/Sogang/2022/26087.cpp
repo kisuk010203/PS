@@ -3,7 +3,7 @@ using namespace std;
 typedef long long ll;
 typedef pair<ll, ll> p;
 #define MOD 1000000007
-int find(ll *parent, int x) {
+int find(ll* parent, int x) {
     if (!parent[x])
         return x;
 

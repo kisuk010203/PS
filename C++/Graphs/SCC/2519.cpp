@@ -47,7 +47,7 @@ ll SCC(ll start) {
 int main() {
     cin >> ver_num;
     ver_num *= 3;
-    segment *line = new segment[ver_num];
+    segment* line = new segment[ver_num];
     for (ll i = 0; i < ver_num; i++) {
         ll a, b, c, d;
         cin >> a >> b >> c >> d;
@@ -55,20 +55,20 @@ int main() {
     }
     for (ll i = 0; i < ver_num; i++) {
         switch (i % 3) {
-        case 0:
-            adj[i].push_back(i + 1 + ver_num);
-            adj[i].push_back(i + 2 + ver_num);
-            break;
-        case 1:
-            adj[i].push_back(i - 1 + ver_num);
-            adj[i].push_back(i + 1 + ver_num);
-            break;
-        case 2:
-            adj[i].push_back(i - 1 + ver_num);
-            adj[i].push_back(i - 2 + ver_num);
-            break;
-        default:
-            break;
+            case 0:
+                adj[i].push_back(i + 1 + ver_num);
+                adj[i].push_back(i + 2 + ver_num);
+                break;
+            case 1:
+                adj[i].push_back(i - 1 + ver_num);
+                adj[i].push_back(i + 1 + ver_num);
+                break;
+            case 2:
+                adj[i].push_back(i - 1 + ver_num);
+                adj[i].push_back(i - 2 + ver_num);
+                break;
+            default:
+                break;
         }
         for (ll j = i + 1; j < ver_num; j++) {
             if (llersection(line[i], line[j])) {

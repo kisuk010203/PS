@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-int main(){
-    std::vector <int> vec;
+int main() {
+    std::vector<int> vec;
     vec.push_back(10);
     vec.push_back(20);
     vec.push_back(30);
@@ -16,5 +16,6 @@ int main(){
     // std::cout << "3rd element: "<< *itr << std::endl;
 
     //range-based for loop
-    for(int elem : vec) std::cout << "element : " << elem << std::endl;
+    for (int elem : vec)
+        std::cout << "element : " << elem << std::endl;
 }

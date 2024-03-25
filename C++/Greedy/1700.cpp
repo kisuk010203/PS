@@ -40,9 +40,10 @@ int main() {
             first_used_task[use_seq[j]] = min(first_used_task[use_seq[j]], j);
         }
         int evicted_task, evicted_max = -1;
-        for(int i=0; i<MAX; i++){
-            if(!is_used[i]) continue;
-            if(evicted_max < first_used_task[i]){
+        for (int i = 0; i < MAX; i++) {
+            if (!is_used[i])
+                continue;
+            if (evicted_max < first_used_task[i]) {
                 evicted_task = i;
                 evicted_max = first_used_task[i];
             }

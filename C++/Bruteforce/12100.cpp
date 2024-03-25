@@ -18,9 +18,9 @@ void do_move(int i, int j, int move) {
         if (board[i + dx[move]][j + dy[move]] == 0) {
             board[i + dx[move]][j + dy[move]] = board[i][j];
             board[i][j] = 0;
-            
+
         } else if (board[i + dx[move]][j + dy[move]] == board[i][j]) {
-            if(changed[i + dx[move]][j + dy[move]] == 1 || changed[i][j] == 1)
+            if (changed[i + dx[move]][j + dy[move]] == 1 || changed[i][j] == 1)
                 return;
             board[i + dx[move]][j + dy[move]] *= 2;
             board[i][j] = 0;
@@ -41,7 +41,7 @@ void backtracking(int cnt) {
         }
         return;
     }
-    
+
     int temp[20][20];
     copy(&board[0][0], &board[0][0] + 20 * 20, &temp[0][0]);
     for (int move = 0; move < 4; move++) {
@@ -52,9 +52,9 @@ void backtracking(int cnt) {
                     do_move(i, j, move);
                 }
             }
-        } else{
-            for(int i = n-1; i>=0; i--) {
-                for(int j = n-1; j>=0; j--) {
+        } else {
+            for (int i = n - 1; i >= 0; i--) {
+                for (int j = n - 1; j >= 0; j--) {
                     do_move(i, j, move);
                 }
             }

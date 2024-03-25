@@ -1,14 +1,14 @@
-#include <iostream>
 #include <deque>
+#include <iostream>
 template <typename T>
-void print_deque(std::deque<T>& dq){
+void print_deque(std::deque<T>& dq) {
     std::cout << "[ ";
-    for(const auto& elem :dq){
-        std::cout << elem <<" ";
+    for (const auto& elem : dq) {
+        std::cout << elem << " ";
     }
-    std::cout<<"]" << std::endl;
+    std::cout << "]" << std::endl;
 }
-int main(){
+int main() {
     std::deque<int> dq;
     dq.push_back(10);
     dq.push_back(20);

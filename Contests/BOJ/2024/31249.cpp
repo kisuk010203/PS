@@ -24,8 +24,7 @@ int main() {
             ll ret1 = min(ret, 7LL);
             cout << m + 1 << " " << ret1 << "\n";
         } else {
-            cout << m + 1 << " "
-                 << 7 + 2 * (n - 2 * m - 2) << "\n";
+            cout << m + 1 << " " << 7 + 2 * (n - 2 * m - 2) << "\n";
         }
     }
 }

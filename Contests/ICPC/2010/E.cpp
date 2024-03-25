@@ -3,7 +3,7 @@ using namespace std;
 #define MOD 9999991
 typedef long long ll;
 ll combdp[21][21];
-ll comb(int n, int k) { // dp for comb
+ll comb(int n, int k) {  // dp for comb
     if (combdp[n][k] != -1)
         return combdp[n][k];
     if (n < k)
@@ -12,12 +12,12 @@ ll comb(int n, int k) { // dp for comb
         return combdp[n][k] = 1;
     return combdp[n][k] = (comb(n - 1, k) + comb(n - 1, k - 1)) % MOD;
 }
-ll tree_num(int *arr, int n, int idx, int start, int end) {
+ll tree_num(int* arr, int n, int idx, int start, int end) {
     if (start >= end || idx == -1)
         return 1;
-    int cnt = 0;                         // left count
-    int allcnt = 0;                      // all count in range(start, end)
-    int firstleft = -1, firstright = -1; // first left index, first right index
+    int cnt = 0;                          // left count
+    int allcnt = 0;                       // all count in range(start, end)
+    int firstleft = -1, firstright = -1;  // first left index, first right index
     for (int i = idx + 1; i < n; i++) {
         if (start <= arr[i] && arr[i] <= end) {
             allcnt++;
@@ -48,7 +48,7 @@ int main() {
     while (t--) {
         int n;
         cin >> n;
-        int *arr = new int[n];
+        int* arr = new int[n];
         for (int i = 0; i < n; i++)
             cin >> arr[i];
         // cout << "TEST " << t << endl;

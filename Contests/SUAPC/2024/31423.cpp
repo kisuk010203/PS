@@ -25,7 +25,7 @@ int main() {
         int current = stack.back();
         cout << school[current];
         stack.pop_back();
-        for (int i = adj_list[current].size() - 1; i >=0; i--) {
+        for (int i = adj_list[current].size() - 1; i >= 0; i--) {
             stack.push_back(adj_list[current][i]);
         }
     }

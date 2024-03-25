@@ -4,9 +4,11 @@ typedef struct HW {
     int due;
     int weight;
 } HW;
-bool comp(const HW &a, const HW &b) { return a.due > b.due; }
+bool comp(const HW& a, const HW& b) {
+    return a.due > b.due;
+}
 struct comp_pq {
-    bool operator()(const HW &a, const HW &b) { return a.weight < b.weight; }
+    bool operator()(const HW& a, const HW& b) { return a.weight < b.weight; }
 };
 int main() {
     cin.tie(0);
@@ -22,7 +24,7 @@ int main() {
         HWs.push_back({d, w});
     }
 
-    sort(HWs.begin(), HWs.end(), comp); // sort HW decreasing due
+    sort(HWs.begin(), HWs.end(), comp);  // sort HW decreasing due
     int due_idx = 0;
     long long ret = 0;
     for (int due_date = 1000; due_date; due_date--) {

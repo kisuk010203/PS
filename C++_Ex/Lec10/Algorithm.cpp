@@ -1,19 +1,19 @@
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 #include <vector>
 
 template <typename Iter>
-void print(Iter begin, Iter end){
-    while(begin != end){
+void print(Iter begin, Iter end) {
+    while (begin != end) {
         std::cout << *begin << " ";
         begin++;
     }
     std::cout << std::endl;
 }
-struct int_compare{
-    bool operator()(const int& a, const int& b) const{ return a>b;}
+struct int_compare {
+    bool operator()(const int& a, const int& b) const { return a > b; }
 };
-int main(){
+int main() {
     std::vector<int> vec;
     vec.push_back(5);
     vec.push_back(3);

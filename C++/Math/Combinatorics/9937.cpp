@@ -2,9 +2,13 @@
 using namespace std;
 #define PRIME 1000000007
 typedef long long ll;
-ll select_three(ll n) { return n * (n - 1) * (n - 2) / 6 % PRIME; }
-ll select_two(ll n) { return n * (n - 1) / 2 % PRIME; }
-void create_or_add(unordered_map<double, ll> &map, double slope) {
+ll select_three(ll n) {
+    return n * (n - 1) * (n - 2) / 6 % PRIME;
+}
+ll select_two(ll n) {
+    return n * (n - 1) / 2 % PRIME;
+}
+void create_or_add(unordered_map<double, ll>& map, double slope) {
     auto idx = map.find(slope);
     if (idx != map.end()) {
         idx->second++;
@@ -12,7 +16,7 @@ void create_or_add(unordered_map<double, ll> &map, double slope) {
         map[slope] = 1;
     }
 }
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     cin.tie(0);
     cout.tie(0);
     ios_base::sync_with_stdio(false);
@@ -33,7 +37,7 @@ int main(int argc, char const *argv[]) {
     ll parallels = (select_three(infinite_slope) +
                     select_two(infinite_slope) * (n - infinite_slope)) %
                    PRIME;
-    for (const auto &pair : slope) {
+    for (const auto& pair : slope) {
         ll value = pair.second;
         ll temp = select_three(value) + select_two(value) * (n - value) % PRIME;
         parallels = (parallels + temp) % PRIME;

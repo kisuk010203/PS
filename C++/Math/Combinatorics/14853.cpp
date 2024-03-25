@@ -18,8 +18,8 @@ int main() {
             base_res /= (n1 + n2 + 2 + i);
         }
         for (int i = m1 + 1; i <= m1 + m2; i++) {
-            ld curr =
-                prev * (i * (m1 + n2 + 2 - i)) / ((i - m1) * ((n1 + n2 + 2 - i)));
+            ld curr = prev * (i * (m1 + n2 + 2 - i)) /
+                      ((i - m1) * ((n1 + n2 + 2 - i)));
             accum += curr;
             prev = curr;
         }

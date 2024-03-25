@@ -2,7 +2,7 @@
 using namespace std;
 typedef pair<int, int> pii;
 struct comp {
-    bool operator()(const pii &a, const pii &b) const {
+    bool operator()(const pii& a, const pii& b) const {
         if (a.second == b.second)
             return (a.first > b.first);
         return (a.second > b.second);
