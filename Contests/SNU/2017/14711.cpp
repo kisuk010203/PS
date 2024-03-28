@@ -5,7 +5,9 @@ int n;
 bool board[MAX][MAX];
 int dx[4] = {0, 0, 0, -1};
 int dy[4] = {0, -1, 1, 0};
-bool is_possible(int r, int c) { return r >= 0 && c >= 0 && r < n && c < n; }
+bool is_possible(int r, int c) {
+    return r >= 0 && c >= 0 && r < n && c < n;
+}
 bool get_all_sum(int r, int c) {
     bool cnt = board[r][c];
     for (int i = 0; i < 4; i++) {

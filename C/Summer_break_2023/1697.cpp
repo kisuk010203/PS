@@ -2,8 +2,10 @@
 using namespace std;
 #define INF -1
 int duration[200001];
-bool is_valid(int k) { return k >= 0 && k <= 200000 && duration[k] == INF; }
-int main(int argc, char const *argv[]) {
+bool is_valid(int k) {
+    return k >= 0 && k <= 200000 && duration[k] == INF;
+}
+int main(int argc, char const* argv[]) {
     int n, k;
     cin >> n >> k;
     queue<int> bfs_queue;

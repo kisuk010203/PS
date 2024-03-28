@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-bool str_compare(string a, string b) { return (a + b) > (b + a); }
+bool str_compare(string a, string b) {
+    return (a + b) > (b + a);
+}
 int main() {
     cin.tie(0);
     cout.tie(0);

@@ -4,12 +4,14 @@ typedef struct jewel {
     int weight;
     int value;
 } jewel;
-bool comp(jewel a, jewel b) { return a.weight < b.weight; }
+bool comp(jewel a, jewel b) {
+    return a.weight < b.weight;
+}
 struct pq_comp {
     bool operator()(const jewel a, const jewel b) {
         if (a.value == b.value)
-            return a.weight > b.weight; // weight increasing
-        return a.value < b.value;       // value decreasing
+            return a.weight > b.weight;  // weight increasing
+        return a.value < b.value;        // value decreasing
     }
 };
 int main() {

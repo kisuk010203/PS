@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     ll n, p;
     cin >> n >> p;
     ll ret = 1;

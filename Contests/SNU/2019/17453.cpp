@@ -27,7 +27,7 @@ void dfs(int idx, bits sum) {
     visited[idx] = 1;
     dfs(idx + 1, sum ^ switches[idx]);
 }
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     cin.tie(0);
     cout.tie(0);
     ios_base::sync_with_stdio(false);
@@ -44,7 +44,7 @@ int main(int argc, char const *argv[]) {
     bits initial_bit(initial);
     memset(visited, 0, sizeof(visited));
 
-        dfs(0, initial_bit);
+    dfs(0, initial_bit);
     for (int i = -n; i <= n; i++) {
         if (ans_map.find(i) == ans_map.end()) {
             cout << "-1\n";

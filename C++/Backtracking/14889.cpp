@@ -40,7 +40,7 @@ void backtracking(int count) {
         }
     }
 }
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     memset(arr, 0, sizeof(arr));
     memset(back_seq, 0, sizeof(back_seq));
     cin.tie(0);

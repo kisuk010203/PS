@@ -18,7 +18,7 @@ void max3(double s, double n, double u) {
     } else
         cout << "U\n";
 }
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     chip s, n, u;
     cin >> s.price >> s.weight;
     cin >> n.price >> n.weight;

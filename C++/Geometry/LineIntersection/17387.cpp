@@ -20,7 +20,7 @@ int main() {
     double nom2 = (x[0] * y[1] - x[1] * y[0]) * (y[2] - y[3]) -
                   (y[0] - y[1]) * (x[2] * y[3] - x[3] * y[2]);
     if (a != 1 && b != 1) {
-        if (a == 0 && b == 0) { // one line
+        if (a == 0 && b == 0) {  // one line
             int flag = 0, one_point = 0;
             int d = min(x[0], x[1]), e = max(x[0], x[1]);
             int f = min(x[2], x[3]), g = max(x[2], x[3]);

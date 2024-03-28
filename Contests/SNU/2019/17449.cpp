@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     cin.tie(0);
     cout.tie(0);
     ios_base::sync_with_stdio(false);
@@ -22,7 +22,7 @@ int main(int argc, char const *argv[]) {
             high_rank++;
         else if (rank == high_rank)
             ties++;
-        else { // rank > high_rank
+        else {  // rank > high_rank
             if (rank < high_rank + ties) {
                 ties = high_rank + ties - rank + 1;
                 high_rank = rank;

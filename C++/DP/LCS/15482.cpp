@@ -13,7 +13,8 @@ int main() {
             if (a[(i - 1) * 3] == b[(j - 1) * 3] &&
                 a[(i - 1) * 3 + 1] == b[(j - 1) * 3 + 1] &&
                 a[(i - 1) * 3 + 2] == b[(j - 1) * 3 + 2]) {
-                dp[i][j] = max(dp[i - 1][j - 1] + 1, max(dp[i - 1][j], dp[i][j - 1]));
+                dp[i][j] =
+                    max(dp[i - 1][j - 1] + 1, max(dp[i - 1][j], dp[i][j - 1]));
             } else {
                 dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
             }

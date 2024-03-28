@@ -1,31 +1,31 @@
 #include <bits/stdc++.h>
 using namespace std;
 class Node {
-  public:
+   public:
     char data;
-    vector<Node *> siblings;
+    vector<Node*> siblings;
 };
 class Trie {
-  private:
-    Node *root = new Node;
+   private:
+    Node* root = new Node;
 
-  public:
+   public:
     void push(string str) { insert(str, 0, root); }
-    void insert(string str, int idx, Node *node) {
+    void insert(string str, int idx, Node* node) {
         if (idx >= str.length())
             return;
         int next = -1;
         for (int i = 0; i < node->siblings.size(); i++) {
-            if (str[idx] == node->siblings[i]->data) { // when same character
+            if (str[idx] == node->siblings[i]->data) {  // when same character
                 next = i;
                 break;
             }
         }
         if (next != -1)
             insert(str, idx + 1, node->siblings[next]);
-        else // if no same character, add as a child
+        else  // if no same character, add as a child
         {
-            Node *newNode = new Node;
+            Node* newNode = new Node;
             newNode->data = str[idx];
             node->siblings.push_back(newNode);
             insert(str, idx + 1, newNode);
@@ -34,7 +34,7 @@ class Trie {
 
     bool search(string str) { return findWord(str, 0, root); }
 
-    bool findWord(string str, int idx, Node *node) {
+    bool findWord(string str, int idx, Node* node) {
         if (idx >= str.length())
             return true;
         int next = -1;
@@ -57,7 +57,7 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        Trie *myTrie = new Trie;
+        Trie* myTrie = new Trie;
         int n;
         cin >> n;
         bool flag = true;

@@ -13,7 +13,7 @@ int main() {
         cin >> a >> b;
         meetings.push_back({a, b});
     }
-    int dp[n][2]; // 0 : do meeting on that day
+    int dp[n][2];  // 0 : do meeting on that day
     dp[n - 1][0] = (meetings[n - 1].first == 1 ? meetings[n - 1].second : 0);
     dp[n - 1][1] = 0;
 

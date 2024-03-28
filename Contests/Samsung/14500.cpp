@@ -20,8 +20,4 @@ int main() {
     }
     memset(visited, 0, sizeof(visited));
     ans = 0;
-
-
-
-
 }

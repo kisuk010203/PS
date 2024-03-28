@@ -5,7 +5,7 @@ using namespace std;
 typedef long long ll;
 typedef pair<double, ll> edge;
 struct Comparator {
-    bool operator()(edge &left, edge &right) {
+    bool operator()(edge& left, edge& right) {
         return left.first > right.first;
     }
 };
@@ -42,7 +42,7 @@ void dijkstra(ll start) {
         }
     }
 }
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     int N, M;
     cin >> N >> M;
     vector<pair<ll, ll>> negedge;

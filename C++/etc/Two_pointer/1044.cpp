@@ -20,8 +20,8 @@ int main() {
         ll left_weight = 0, right_weight = 0;
         for (int j = 0; j < N / 2; j++) {
             if (i & (1 << j)) {
-                left_weight += players[j];          // 작은게 나중에 옴
-                right_weight += players[N / 2 + j]; // 작은게 나중에 옴
+                left_weight += players[j];           // 작은게 나중에 옴
+                right_weight += players[N / 2 + j];  // 작은게 나중에 옴
                 left_cnt++, right_cnt++;
             }
         }

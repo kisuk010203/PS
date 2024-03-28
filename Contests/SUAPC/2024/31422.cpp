@@ -62,9 +62,11 @@ int main() {
                 odd_count++;
         }
         curr_xor_res = (odd_count * (N + 1 - odd_count) % MOD);
-        and_result = (and_result + (curr_and_res * ((1 << i) % MOD)) % MOD) % MOD;
+        and_result =
+            (and_result + (curr_and_res * ((1 << i) % MOD)) % MOD) % MOD;
         or_result = (or_result + (curr_or_res * ((1 << i) % MOD)) % MOD) % MOD;
-        xor_result = (xor_result + (curr_xor_res * ((1 << i) % MOD)) % MOD) % MOD;
+        xor_result =
+            (xor_result + (curr_xor_res * ((1 << i) % MOD)) % MOD) % MOD;
     }
     cout << and_result << " " << or_result << " " << xor_result << '\n';
 }

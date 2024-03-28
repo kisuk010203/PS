@@ -5,7 +5,7 @@ int gcd(int a, int b) {
         return a;
     return gcd(b, a % b);
 }
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     int a, b;
     cin >> a >> b;
     int gcd_a_b = gcd(a, b);

@@ -14,7 +14,9 @@ ll exp(ll base, ll exponent) {
     }
     return temp;
 }
-ll inverse(ll num) { return exp(num, PRIME - 2); }
+ll inverse(ll num) {
+    return exp(num, PRIME - 2);
+}
 void set_combination(int n) {
     for (int i = 0; i <= n; i++) {
         combination[i][0] = combination[i][i] = 1;
@@ -39,7 +41,7 @@ void set_exp_sum(ll n, ll k) {
     temp = (temp * inverse(k + 1)) % PRIME;
     exp_sum[k] = temp;
 }
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     ll n, k;
     cin >> n >> k;
     memset(exp_sum, 0, sizeof(exp_sum));

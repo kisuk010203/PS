@@ -4,7 +4,7 @@ const double PI = M_PI;
 #define MAX 1000000
 typedef long long ll;
 typedef complex<double> cpx;
-void FFT(vector<cpx> &v, bool inv) {
+void FFT(vector<cpx>& v, bool inv) {
     ll n = v.size();
     for (int i = 1, j = 0; i < n; i++) {
         ll bit = n >> 1;
@@ -42,7 +42,7 @@ void FFT(vector<cpx> &v, bool inv) {
         }
 }
 
-vector<ll> mul_poly(vector<ll> &p, vector<ll> &q) {
+vector<ll> mul_poly(vector<ll>& p, vector<ll>& q) {
     vector<cpx> p_cpx(p.begin(), p.end());
     vector<cpx> q_cpx(q.begin(), q.end());
 
@@ -77,8 +77,8 @@ int main() {
 
     ll n;
     cin >> n;
-    vector<ll> diagonal(n); // n-1 degree
-    vector<ll> square(n);   // n-1 degree
+    vector<ll> diagonal(n);  // n-1 degree
+    vector<ll> square(n);    // n-1 degree
 
     fill(diagonal.begin(), diagonal.end(), 0);
     fill(square.begin(), square.end(), 0);
@@ -89,7 +89,7 @@ int main() {
         diagonal[(temp * 2) % n]++;
     }
 
-    vector<ll> ans = mul_poly(square, square); // 2n-2 degree (0~2n-2)
+    vector<ll> ans = mul_poly(square, square);  // 2n-2 degree (0~2n-2)
     ll cnt = 0;
     for (ll i = 1; i < n; i++) {
         ll idx = (i * i) % n;

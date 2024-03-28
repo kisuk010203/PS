@@ -9,7 +9,7 @@ using namespace std;
 const double PI = acos(-1.0);
 using cd = complex<double>;
 
-void fft(vector<cd> &a, bool invert) {
+void fft(vector<cd>& a, bool invert) {
     int n = a.size();
 
     for (int len = 1; len < n; len <<= 1) {
@@ -28,7 +28,7 @@ void fft(vector<cd> &a, bool invert) {
     }
 }
 
-vector<int> multiply(const vector<int> &a, const vector<int> &b) {
+vector<int> multiply(const vector<int>& a, const vector<int>& b) {
     int n = 1;
     while (n < max(a.size(), b.size()))
         n <<= 1;
@@ -54,8 +54,8 @@ vector<int> multiply(const vector<int> &a, const vector<int> &b) {
 }
 
 int main() {
-    vector<int> a = {1, 2, 3}; // coefficients of first polynomial
-    vector<int> b = {4, 5, 6}; // coefficients of second polynomial
+    vector<int> a = {1, 2, 3};  // coefficients of first polynomial
+    vector<int> b = {4, 5, 6};  // coefficients of second polynomial
 
     vector<int> result = multiply(a, b);
 

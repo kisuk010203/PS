@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-void create_or_add(unordered_map<int, int> &map, int key) {
+void create_or_add(unordered_map<int, int>& map, int key) {
     auto iter = map.find(key);
     if (iter == map.end()) {
         map[key] = 1;
@@ -8,7 +8,7 @@ void create_or_add(unordered_map<int, int> &map, int key) {
         iter->second++;
     }
 }
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     cin.tie(0);
     cout.tie(0);
     ios_base::sync_with_stdio(false);
@@ -33,10 +33,10 @@ int main(int argc, char const *argv[]) {
     int range = values[n - 1] - values[0];
 
     int populated_value = 0;
-    for (const auto &pair : count_map) {
+    for (const auto& pair : count_map) {
         populated_value = max(populated_value, pair.second);
     }
-    for (const auto &pair : count_map) {
+    for (const auto& pair : count_map) {
         if (pair.second == populated_value) {
             populated_vector.push_back(pair.first);
         }

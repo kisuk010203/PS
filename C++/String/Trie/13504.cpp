@@ -4,21 +4,21 @@ using namespace std;
 typedef struct Trie {
     bool is_leaf;
     ll leaf_num;
-    Trie *child[2];
+    Trie* child[2];
 
-    Trie() { // constructor
+    Trie() {  // constructor
         is_leaf = false;
         child[0] = nullptr;
         child[1] = nullptr;
     }
 
-    ~Trie() { // destructor
+    ~Trie() {  // destructor
         delete child[0];
         delete child[1];
     }
 
     void insert_pattern(string pattern, ll num) {
-        Trie *curr = this;
+        Trie* curr = this;
         for (int i = 0; i < pattern.size(); i++) {
             int val = pattern[i] - '0';
             if (curr->child[val] == nullptr) {
@@ -32,7 +32,7 @@ typedef struct Trie {
     }
 
     ll query(string curr_str, ll curr_num) {
-        Trie *curr = this;
+        Trie* curr = this;
         for (int i = 0; i < curr_str.size(); i++) {
             int val = curr_str[i] - '0';
             if (curr->child[val ^ 1] != nullptr) {
@@ -55,8 +55,10 @@ void init() {
     k = 0;
     ans = 0;
 }
-string int_to_string(int num) { return bitset<32>(num).to_string(); }
-void find_answer(Trie *root) {
+string int_to_string(int num) {
+    return bitset<32>(num).to_string();
+}
+void find_answer(Trie* root) {
     for (int i = 0; i <= n; i++) {
         ll query_result = root->query(strings[i], seq[i]);
         ans = max(ans, query_result);
@@ -69,7 +71,7 @@ int main() {
     cin >> t;
     while (t--) {
         init();
-        Trie *root = new Trie();
+        Trie* root = new Trie();
         cin >> n;
         seq.push_back(0);
         strings.push_back(int_to_string(0));

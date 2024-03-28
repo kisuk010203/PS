@@ -2,7 +2,7 @@
 using namespace std;
 typedef struct trie {
     bool is_leaf;
-    trie *children[26];
+    trie* children[26];
 
     trie() {
         is_leaf = false;
@@ -12,26 +12,26 @@ typedef struct trie {
     }
 
     ~trie() {
-        for(int i=0; i<26; i++){
+        for (int i = 0; i < 26; i++) {
             delete children[i];
         }
     }
 } trie;
-void insert(trie *root, string word, int idx) {
+void insert(trie* root, string word, int idx) {
     if (idx == word.size()) {
         root->is_leaf = true;
         return;
     }
     int next_idx = word[idx] - 'a';
     if (root->children[next_idx] == nullptr) {
-        trie *new_child = new trie();
+        trie* new_child = new trie();
         root->children[next_idx] = new_child;
         insert(new_child, word, idx + 1);
     } else {
         insert(root->children[next_idx], word, idx + 1);
     }
 }
-int count(trie *root, string word, int idx) {
+int count(trie* root, string word, int idx) {
     int next_idx = word[idx] - 'a';
     if (idx == word.size() && root->is_leaf)
         return 0;
@@ -56,7 +56,7 @@ int main() {
     while (cin >> n) {
         double count_sum = 0;
 
-        trie *root = new trie();
+        trie* root = new trie();
 
         vector<string> word_dictionary;
         for (int i = 0; i < n; i++) {
@@ -71,10 +71,12 @@ int main() {
         }
         count_sum /= n;
         int curr_cnt = 0;
-        for(auto item : root->children){
-            if(item != nullptr) curr_cnt++;
+        for (auto item : root->children) {
+            if (item != nullptr)
+                curr_cnt++;
         }
-        if(curr_cnt == 1) count_sum++;
+        if (curr_cnt == 1)
+            count_sum++;
         printf("%.2lf\n", count_sum);
         delete root;
     }

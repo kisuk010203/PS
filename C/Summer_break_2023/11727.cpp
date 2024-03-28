@@ -2,7 +2,7 @@
 using namespace std;
 #define PRIME 10007
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     int n;
     cin >> n;
     vector<int> dp;

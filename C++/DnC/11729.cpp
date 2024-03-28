@@ -16,5 +16,4 @@ int main() {
     cin >> N;
     cout << (1 << N) - 1 << "\n";
     hanoi(1, 3, N);
-
 }

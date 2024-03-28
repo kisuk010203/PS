@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 // Custom string comparison function
-bool customCompare(const std::string &str1, const std::string &str2) {
+bool customCompare(const std::string& str1, const std::string& str2) {
     // Customize the comparison logic as needed
     return str1.length() < str2.length();
 }
@@ -25,7 +25,7 @@ int main() {
 
     string a = "a";
     cout << a.substr(1) << "\n";
-    cout << (a.substr(1) == "" )<< "\n";
+    cout << (a.substr(1) == "") << "\n";
     cout << (a.substr(1) == "\0") << "\n";
     return 0;
 }

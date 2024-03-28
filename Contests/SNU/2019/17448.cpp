@@ -15,7 +15,9 @@ ll get_exp(ll base, ll expo) {
     return ((temp * temp) % MOD * base) % MOD;
 }
 
-ll get_inverse(ll base) { return get_exp(base, MOD - 2); }
+ll get_inverse(ll base) {
+    return get_exp(base, MOD - 2);
+}
 
 ll get_diff(ll a, ll b, ll c) {
     ll temp = (abs(arr[a]) * abs(arr[b])) % MOD;
@@ -43,7 +45,7 @@ ll use_not_toggle() {
     return ret;
 }
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
     cin.tie(0);
     cout.tie(0);
     ios_base::sync_with_stdio(false);

@@ -1,14 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define MAX 1010
-int arr[MAX]; // counting array
+int arr[MAX];  // counting array
 int before;
 int get_min() {
     for (int i = 0; i < MAX; i++) {
         if (arr[i] != 0)
             return i;
     }
-    return -1; // empty
+    return -1;  // empty
 }
 bool is_possible(int leftover, int key) {
     if (before + 1 == key)
@@ -20,7 +20,7 @@ bool is_possible(int leftover, int key) {
         return 0;
     return 1;
 }
-void curr_index(int curr_min){
+void curr_index(int curr_min) {
     cout << curr_min << " ";
     arr[curr_min]--;
     before = curr_min;

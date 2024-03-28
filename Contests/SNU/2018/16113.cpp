@@ -43,18 +43,18 @@ int get_digit(int start) {
         }
     }
     switch (black_cnt) {
-    case 13:
-        return 8;
-    case 7:
-        return 7;
-    case 9:
-        return 4;
-    case 12:
-        return zero_or_six(start);
-    case 11:
-        return two_three_five(start);
-    default:
-        return -1;
+        case 13:
+            return 8;
+        case 7:
+            return 7;
+        case 9:
+            return 4;
+        case 12:
+            return zero_or_six(start);
+        case 11:
+            return two_three_five(start);
+        default:
+            return -1;
     }
 }
 int main() {

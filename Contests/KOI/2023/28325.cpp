@@ -11,7 +11,7 @@ int main() {
         cin >> degrees[i];
     }
 
-    long long dp[n + 1][4]; // dp[i][j] means that 1 ... i is done, with mode j
+    long long dp[n + 1][4];  // dp[i][j] means that 1 ... i is done, with mode j
     memset(dp, 0, sizeof(dp));
     dp[1][0] = degrees[0];
     dp[1][1] = LONG_LONG_MIN;

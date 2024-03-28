@@ -2,7 +2,9 @@
 using namespace std;
 typedef long long ll;
 typedef pair<ll, ll> p;
-ll radius(p a) { return a.first * a.first + a.second * a.second; }
+ll radius(p a) {
+    return a.first * a.first + a.second * a.second;
+}
 double custom_atan(p a) {
     double angle = atan2(a.second, a.first);
     if (angle < 0)
@@ -38,7 +40,7 @@ int main() {
         if (max_radius == radius(item))
             max_wing.push_back(item);
     }
-    if(max_wing.size() == 1){
+    if (max_wing.size() == 1) {
         cout << 360;
         return 0;
     }
