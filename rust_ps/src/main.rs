@@ -1,9 +1,9 @@
-mod basics;
 use std::fs::File;
 use std::io::{self, BufWriter, Write};
 use std::io::{BufRead, BufReader};
 
 use clap::Parser;
+
 #[allow(dead_code)]
 fn max_of_input() {
     let stdin = io::stdin();
@@ -30,8 +30,6 @@ struct Cli {
     path: std::path::PathBuf,
 }
 fn main() {
-    basics::prob_2557::main();
-
     let args = Cli::parse();
 
     if args.mode == "sort" {
