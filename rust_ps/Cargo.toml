@@ -3,8 +3,36 @@ name = "prob_1000"
 path = "src/basics/prob_1000.rs"
 
 [[bin]]
+name = "prob_1001"
+path = "./src/basics/prob_1001.rs"
+
+[[bin]]
+name = "prob_1008"
+path = "./src/basics/prob_1008.rs"
+
+[[bin]]
+name = "prob_10869"
+path = "./src/basics/prob_10869.rs"
+
+[[bin]]
+name = "prob_10998"
+path = "./src/basics/prob_10998.rs"
+
+[[bin]]
+name = "prob_11720"
+path = "./src/basics/prob_11720.rs"
+
+[[bin]]
 name = "prob_2557"
 path = "src/basics/prob_2557.rs"
+
+[[bin]]
+name = "prob_2562"
+path = "./src/basics/prob_2562.rs"
+
+[[bin]]
+name = "prob_9498"
+path = "./src/basics/prob_9498.rs"
 
 [package]
 name = "rust_ps"
