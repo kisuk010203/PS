@@ -11,6 +11,10 @@ name = "prob_1008"
 path = "./src/basics/prob_1008.rs"
 
 [[bin]]
+name = "prob_10814"
+path = "./src/sort/prob_10814.rs"
+
+[[bin]]
 name = "prob_10869"
 path = "./src/basics/prob_10869.rs"
 
@@ -19,8 +23,20 @@ name = "prob_10998"
 path = "./src/basics/prob_10998.rs"
 
 [[bin]]
+name = "prob_11651"
+path = "./src/sort/prob_11651.rs"
+
+[[bin]]
 name = "prob_11720"
 path = "./src/basics/prob_11720.rs"
+
+[[bin]]
+name = "prob_1181"
+path = "./src/sort/prob_1181.rs"
+
+[[bin]]
+name = "prob_1427"
+path = "./src/sort/prob_1427.rs"
 
 [[bin]]
 name = "prob_2557"
@@ -29,6 +45,10 @@ path = "src/basics/prob_2557.rs"
 [[bin]]
 name = "prob_2562"
 path = "./src/basics/prob_2562.rs"
+
+[[bin]]
+name = "prob_2751"
+path = "./src/sort/prob_2751.rs"
 
 [[bin]]
 name = "prob_9498"
