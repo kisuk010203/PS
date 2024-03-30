@@ -31,6 +31,14 @@ name = "prob_10998"
 path = "./src/basics/prob_10998.rs"
 
 [[bin]]
+name = "prob_11279"
+path = "./src/data_structures/priority_queue/prob_11279.rs"
+
+[[bin]]
+name = "prob_11286"
+path = "./src/data_structures/priority_queue/prob_11286.rs"
+
+[[bin]]
 name = "prob_11651"
 path = "./src/sort/prob_11651.rs"
 
@@ -45,6 +53,14 @@ path = "./src/sort/prob_1181.rs"
 [[bin]]
 name = "prob_1427"
 path = "./src/sort/prob_1427.rs"
+
+[[bin]]
+name = "prob_1715"
+path = "./src/data_structures/priority_queue/prob_1715.rs"
+
+[[bin]]
+name = "prob_1927"
+path = "./src/data_structures/priority_queue/prob_1927.rs"
 
 [[bin]]
 name = "prob_2557"
