@@ -5,4 +5,7 @@ mod data_structures {
     mod segtree {}
     mod stack {}
 }
+mod graphs {
+    mod articulation {}
+}
 mod sort {}
