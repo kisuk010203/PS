@@ -43,6 +43,10 @@ name = "prob_11286"
 path = "./src/data_structures/priority_queue/prob_11286.rs"
 
 [[bin]]
+name = "prob_11400"
+path = "./src/graphs/articulation/prob_11400.rs"
+
+[[bin]]
 name = "prob_11505"
 path = "./src/data_structures/segtree/prob_11505.rs"
 
