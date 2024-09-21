@@ -39,7 +39,8 @@
     "tuple": "cpp",
     "new": "cpp",
     "array": "cpp",
-    "memory": "cpp"
+    "memory": "cpp",
+    "span": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
   //VSCODE Vim extension errors
