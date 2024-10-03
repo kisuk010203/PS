@@ -127,3 +127,6 @@ path = "src/lib.rs"
 [dependencies.clap]
 version = "4.0"
 features = [ "derive",]
+[[bin]]
+name = "prob_2042"
+path = "./src/data_structures/segtree/prob_2042.rs"
