@@ -10,6 +10,16 @@ int main() {
     cin.tie(NULL); ios_base::sync_with_stdio(false);
     int T; cin >> T;
     while(T--) {
-        
+        int n; cin >> n;
+        vector<int> v(n) ;
+        rep(i, 0, n) cin >> v[i];
+        int min_ans = n;
+        rep(i, 0, n) {
+            int cnt = i;
+            rep(j, i + 1, n)
+                if(v[j] > v[i]) cnt++;
+            min_ans = min(min_ans, cnt);
+        }
+        cout << min_ans << '\n';
     }
 }
