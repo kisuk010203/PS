@@ -1,0 +1,13 @@
+build:
+	g++ -o src/main.cpp -g src/a.out
+run:
+	./src/a.out
+clean:
+	rm -f src/a.out
+	./clean.sh
+debug:
+	gdb ./src/a.out
+test:
+# 	Run python file with argument PROB to generate test cases.
+# 	For real use, we run `make test PROB=your_problem_name`
+	python3 tests/test_generator.py $(PROB)
