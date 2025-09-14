@@ -5,11 +5,9 @@ result=$(find . -type f -name "$1.*" 2>/dev/null)
 if [ -n "$result" ]; then
     echo "File Found at: $result"
     if [[ "$result" == *.cpp ]]; then
-        filename=$(basename "$result" .cpp)
-        g++ "$result" -o "$filename" && "./$filename"
+        g++ "$result" -o "src/a.out" -g
     elif [[ "$result" == *.c ]]; then
-        filename=$(basename "$result" .c)
-        gcc "$result" -o "$filename" && "./$filename"
+        gcc "$result" -o "src/a.out"
     elif [[ "$result" == *.py ]]; then
         python "$result"
     else
