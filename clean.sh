@@ -5,3 +5,4 @@ for file in [0-9]*; do
         rm -f "$file"
     fi
 done
+rm testcases/*
