@@ -2,3 +2,4 @@
 .metals/
 gen.ipynb
 **target**
+data_gen.py
